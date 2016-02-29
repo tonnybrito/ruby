@@ -4,6 +4,7 @@
 # Esta classe deve receber um número inteiro 4130442099 no construtor
 # Esta classe deve possuir um método para exibir o telefone no formato (41)3044-2099
 
+
 class Telefone # Telefone é uma classe que foi definido com o modulo "class" (class é um repositorio de metodos)
 
   attr_accessor :phone # :phone é um atributo da classe Telefone
@@ -15,7 +16,7 @@ class Telefone # Telefone é uma classe que foi definido com o modulo "class" (c
   end
 
   def num_phone # definindo o metodo (num_phone) - este devará ao ser chamado responder com os numeros de telefone FIXO e CELULAR atraves das variantes  tel_1 e tel_2
-   return " (#{@phone.to_s.slice(0..1)})#{@phone.to_s.slice(2..5)}-#{@phone.to_s.slice(6..9)}"
+   return "(#{@phone.to_s.slice(0..1)})#{@phone.to_s.slice(2..5)}-#{@phone.to_s.slice(6..9)}"
   end
 
   def celular? # definindo o metodo = (celular?) - ao ser chamado responderá pelas variantes  tel_1 e tel_2  se é falso ou verdadeiro o numero do celular
@@ -27,7 +28,9 @@ class Telefone # Telefone é uma classe que foi definido com o modulo "class" (c
   end
 end
 
-tel_1 = Telefone.new(4_130_442_099)
-tel_2 = Telefone.new(4_198_755_876)
+#tel_1 = Telefone.new(4_130_442_099)
+#tel_2 = Telefone.new(4_198_755_876)
 
 
+#COMO CRIAR UM OBJETO DA CLASSE TELEFONE?
+#R: CHAMANDO O CONSTRUTOR DA CLASSE -- EXP: tel1 = Telefone.new(??????????)
