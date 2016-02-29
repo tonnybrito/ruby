@@ -93,9 +93,3 @@ pessoa1 = Pessoa.new("Antonio", "Brito", 30553734, 30442099, 97924292, "colombo"
 # Retorna o calculo da idade --------- return  data - @data_nasc.year
 # retorna a data como dia/mes/ano ---- return @data_nasc.strftime('%d/%m/%Y')
 
-
-
-  def data_nascimento # retornar a data de nascimento no formato  ??/??/???? "12/08/1964"
-     nasc = Date.strftime("%d/%m/%Y").to_s
-  end
-
