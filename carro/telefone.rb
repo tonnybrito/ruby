@@ -5,7 +5,7 @@
 
 
 
-class Telefone # Telefone é uma classe que foi definido com o modulo "class" (class é um repositorio dec metodos)
+class Telefone # Telefone é uma classe que foi definido com o modulo "class" (class é um repositorio de metodos)
 
   attr_accessor :phone # :phone é um atributo da classe Telefone
 
@@ -15,11 +15,11 @@ class Telefone # Telefone é uma classe que foi definido com o modulo "class" (c
 
   end
 
-  def num_phone # definindo o metodo = (num_phone) - este devará ao ser chamado responder com os numeros de telefone FIXO e CELULAR atraves das variantes  tel_1 e tel_2
-    if @phone == @phone #usando o slice solicito 3 consultas a 1ª identifica e imprime os 2 primeiros digitos do fone, a 2ª os 4 digitos seguintes, 3ª os ult. 4 digitos
+  def num_phone # definindo o metodo (num_phone) - este devará ao ser chamado responder com os numeros de telefone FIXO e CELULAR atraves das variantes  tel_1 e tel_2
+    if @phone == @phone #usando o slice solicito 3 consultas, a 1ª identifica e imprime os 2 primeiros digitos do fone, a 2ª os 4 digitos seguintes, 3ª os ult. 4 digitos
       return " (#{@phone.to_s.slice(0..1)})#{@phone.to_s.slice(2..5)}-#{@phone.to_s.slice(6..9)}"
     else
-      return "" #retrnando um elemento vazio
+      return "" #retornando um elemento vazio
     end
   end
 
