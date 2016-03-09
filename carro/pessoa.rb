@@ -18,8 +18,6 @@
 # CHAMAR A CLASSE TELEFONE (telefone.rb) NA CLASSE PESSOA (pessoa.rb)
 
 
-
-require 'array'
 require 'date'
 require 'time'
 require './telefone'
@@ -49,11 +47,15 @@ class Pessoa < Telefone
 
   def tels
     var = []
-    phones.each do |telef|
-      var.push(telef.num_phone)
-    end
-    lista = var.join(", ")
-    return " os telefones do sr. #{pri_nome} #{ult_nome} são: #{lista}"
+    #phones.each do |telef|
+    #  telef = var.push(telef.num_phone)
+    #end
+    var.push(phones.num_phone)
+    lista = phones.map { |telef|  }
+    lista.join(", ")
+
+    #lista = resultado do map
+    #return " os telefones do sr. #{pri_nome} #{ult_nome} são: #{lista}"
   end
 
   def end_resid
