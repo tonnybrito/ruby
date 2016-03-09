@@ -11,10 +11,7 @@
 # Para calcular a idade do carro, você deverá subtrair o ano atual do ano de fabricação do veículo.
 
 class Carro
-  attr_accessor :marca
-  attr_accessor :modelo
-  attr_accessor :ano
-  attr_accessor :cor
+  attr_accessor :marca, :modelo, :ano, :cor
 
   def initialize(p_marca, p_modelo, p_ano, p_cor)
     @marca = p_marca
@@ -45,7 +42,7 @@ class Carro
   end
 
   def mostra_carro
-    return "Meu carro é um #{@marca}, modelo: #{@modelo}, ano: #{@ano}, ele é #{@cor}, ele tem #{calcula_idade} anos de fabricação"
+    return "O carro é um #{@marca}, modelo: #{@modelo}, ano: #{@ano}, ele é #{@cor}, e tem #{calcula_idade} anos de fabricação"
   end
 end
 

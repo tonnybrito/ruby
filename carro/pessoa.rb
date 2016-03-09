@@ -1,5 +1,4 @@
 # AULA 02
-
 # Fazer uma classe para representar pessoas.
 # O construtor deve receber os seguintes parâmetros e definir aos respectivos atributos da classe:
 #   * Primeiro nome
@@ -15,27 +14,28 @@
 #   * Mostrar todos os telefones
 #   * Calcular a idade da pessoa
 #   * Mostrar o endereço da pesss.
-
-=begin
-    def method_name (var1=value1, var2=value2)
-       expr..
-    end
-=end
+# AULA 03
+# CHAMAR A CLASSE TELEFONE (telefone.rb) NA CLASSE PESSOA (pessoa.rb)
 
 
-require 'date' # requer a classe Date
-require 'time' # requer a classe Time
-require_relative 'telefone' #requer a classe Telefone no arquivo telefone.rb
 
-class Pessoa
-  attr_accessor :pri_nome, :ult_nome, :tel_res, :tel_com, :tel_cel, :end_com, :end_res, :data_nasc #atributos
+require 'array'
+require 'date'
+require 'time'
+require './telefone'
 
-  def initialize(p_nome, u_nome,u_telres, u_telcom, u_telcel, add_res, add_com, dt_nasc) #parametros
+class Pessoa < Telefone
+  attr_accessor :pri_nome, :ult_nome, :phones, :end_com, :end_res, :data_nasc #atributos
+
+  def initialize(p_nome, u_nome, t_fones, add_res, add_com, dt_nasc) #parametros
     @pri_nome = p_nome
     @ult_nome = u_nome
-    @tel_res = Telefone.new(u_telres)  # Para chamar os metodos celular? e num_phone da classe Telefone em (telefone.rb), criou-se os atributos :tel_res, :tel_com e
-    @tel_com = Telefone.new(u_telcom)  # :tel_cel com os parametros u_telres, u_telcom e u_telcel, que para serem chamados no arquivo (telefone.rb) dependem das
-    @tel_cel = Telefone.new(u_telcel)  # dos metodos (fone_res, fone_com e fone_cel da classe Pessoa, estes determinaram uma variavel que recebe o resultado do metodo num_phone)
+    @phones = []
+    # O bloco t_fones cria o parametro (indice_telefonico), este recebe o metodo incluir_fone, que tem o parametro (novo_numero), este parametro cria um objeto da
+    # calsse Telefone, e empurra (push) para o atributo @phones.
+    t_fones.each do |indice_telefonico|
+      incluir_fone(indice_telefonico)
+    end
     @end_com = add_com
     @end_res = add_res
     @data_nasc = dt_nasc  # O atributo recebe valor do parametro
@@ -47,19 +47,17 @@ class Pessoa
     return "#{@pri_nome} #{@ult_nome}"
   end
 
-  def fone_res
-    res_fone = @tel_res.num_phone  # meu_fone é uma variavel, que recebe o resultado do metodo num_phone do atributo tel_res
-    return "O telefone residencial é: #{res_fone}"
-  end
+  def tels
+    var = []
+    # pessoa1 pode acessar classe Telefone, @phones está nomeado como ARRAY, este recebe os numeros inteiros da variavel fones que tambem
+    # é um ARRAY, fones 'em pessoa1' empurra para a variavel tel1 "no construtores" que esta dentro do bloco.
+    phones.each do |telef|
+      var.push(telef.num_phone)
+    end
+    lista = var.join(", ")
+    puts " os telefones do sr. #{pri_nome} #{ult_nome} são: #{lista}"
 
-  def fone_com
-     com_fone = @tel_com.num_phone
-    return "O telefone comercial é: #{com_fone}"
-  end
-
-  def fone_cel
-     cel_fone = @tel_cel.num_phone
-    return "O telefone celular é: #{cel_fone}"
+    #return " os telefones do sr. #{pri_nome} #{ult_nome} são: #{telefone.num_phone}"
   end
 
   def end_resid
@@ -82,20 +80,15 @@ class Pessoa
   def data_nascimento # retornar a data de nascimento no formato  ??/??/???? "12/08/1964"
     return @data_nasc.strftime('%d/%m/%Y')
   end
-
   def dados_pessoais
-    return " Nome: #{nome_inteiro} Fone Residencial: #{@tel_res.num_phone}, Fone comercial: #{@tel_com.num_phone}, fone celular: #{@tel_cel.num_phone}, Endereços: Endereço residencial: #{@end_res} Endereço Comercial: #{@end_com} Data de nasc: #{data_nascimento}"
+    return " Nome: #{nome_inteiro} Fone Residencial: #{@phones.res_fone.num_phone}, Fone comercial: #{@phones.com_fone.num_phone}, fone celular: #{@phones.cel_fone.num_phone}, Endereços: Endereço residencial: #{@end_res} Endereço Comercial: #{@end_com} Data de nasc: #{data_nascimento}"
+  end
+
+  # metodo incluir_fone usa o parametro novo_numero para criar um objeto da classe telefone.
+  # ele empurra (push) o objeto criado para o atributo @phones (que é um array).
+  def incluir_fone (novo_numero)
+    telefone = Telefone.new(novo_numero)
+    @phones.push(telefone)
   end
 end
 
-nasc = Date.new(1964, 8, 12)
-pessoa1 = Pessoa.new("Antonio", "Brito", 4130553734, 4130442099, 4198755876, "colombo", "batel", nasc) # a variavel é passada como parametro para o construtor "metodo initialize"
-#
-# Chama somente o ano ---------------- data = Time.new.to_date.year
-# Retorna o calculo da idade --------- return  data - @data_nasc.year
-# retorna a data como dia/mes/ano ---- return @data_nasc.strftime('%d/%m/%Y')
-
-
-#COMO CRIAR UM OBJETO DA CLASSE TELEFONE?
-#R: CHAMANDO O CONSTRUTOR DA CLASSE -- EXP: tel1 = Telefone.new(??????????)
-# Metodo .new é um construtor

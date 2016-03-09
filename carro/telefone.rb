@@ -12,7 +12,6 @@ class Telefone # Telefone é uma classe que foi definido com o modulo "class" (c
 
   def initialize (p_1)
     @phone = p_1# O atributo recebe valor do parametro
-
   end
 
   def num_phone # definindo o metodo (num_phone) - este devará ao ser chamado responder com os numeros de telefone FIXO e CELULAR atraves das variantes  tel_1 e tel_2
