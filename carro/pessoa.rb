@@ -49,15 +49,11 @@ class Pessoa < Telefone
 
   def tels
     var = []
-    # pessoa1 pode acessar classe Telefone, @phones está nomeado como ARRAY, este recebe os numeros inteiros da variavel fones que tambem
-    # é um ARRAY, fones 'em pessoa1' empurra para a variavel tel1 "no construtores" que esta dentro do bloco.
     phones.each do |telef|
       var.push(telef.num_phone)
     end
     lista = var.join(", ")
-    puts " os telefones do sr. #{pri_nome} #{ult_nome} são: #{lista}"
-
-    #return " os telefones do sr. #{pri_nome} #{ult_nome} são: #{telefone.num_phone}"
+    return " os telefones do sr. #{pri_nome} #{ult_nome} são: #{lista}"
   end
 
   def end_resid
@@ -77,7 +73,8 @@ class Pessoa < Telefone
     return  data - @data_nasc.year
   end
 
-  def data_nascimento # retornar a data de nascimento no formato  ??/??/???? "12/08/1964"
+  # retornar a data de nascimento no formato  ??/??/???? "12/08/1964"
+  def data_nascimento
     return @data_nasc.strftime('%d/%m/%Y')
   end
   def dados_pessoais
