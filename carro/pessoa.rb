@@ -46,16 +46,9 @@ class Pessoa < Telefone
   end
 
   def tels
-    var = []
-    #phones.each do |telef|
-    #  telef = var.push(telef.num_phone)
-    #end
-    var.push(phones.num_phone)
-    lista = phones.map { |telef|  }
-    lista.join(", ")
+    lista = phones.map { |telef| (telef.num_phone) }
 
-    #lista = resultado do map
-    #return " os telefones do sr. #{pri_nome} #{ult_nome} são: #{lista}"
+    return " os telefones do sr. #{pri_nome} #{ult_nome} são: #{lista.join(", ")}"
   end
 
   def end_resid
