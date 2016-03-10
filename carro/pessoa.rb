@@ -47,7 +47,6 @@ class Pessoa < Telefone
 
   def tels
     lista = phones.map { |telef| (telef.num_phone) }
-
     return " os telefones do sr. #{pri_nome} #{ult_nome} são: #{lista.join(", ")}"
   end
 
@@ -72,8 +71,9 @@ class Pessoa < Telefone
   def data_nascimento
     return @data_nasc.strftime('%d/%m/%Y')
   end
+
   def dados_pessoais
-    return " Nome: #{nome_inteiro} Fone Residencial: #{@phones.res_fone.num_phone}, Fone comercial: #{@phones.com_fone.num_phone}, fone celular: #{@phones.cel_fone.num_phone}, Endereços: Endereço residencial: #{@end_res} Endereço Comercial: #{@end_com} Data de nasc: #{data_nascimento}"
+    return " Nome: #{nome_inteiro}, #{tels}, Endereços: Endereço residencial: #{@end_res}, Endereço Comercial: #{@end_com}, sua data de nasc: #{data_nascimento}"
   end
 
   # metodo incluir_fone usa o parametro novo_numero para criar um objeto da classe telefone.
@@ -83,6 +83,19 @@ class Pessoa < Telefone
     @phones.push(telefone)
   end
 end
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
