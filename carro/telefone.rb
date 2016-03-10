@@ -2,8 +2,7 @@
 
 # Fazer uma classe Telefone
 # Esta classe deve receber um número inteiro 4130442099 no construtor
-# Esta classe deve possuir um método para exibir o telefone no formato (41)3044-2099
-
+# Esta classe deve possuir um método para exibir o telefone no formato (41)3044-20
 
 class Telefone # Telefone é uma classe que foi definido com o modulo "class" (class é um repositorio de metodos)
 
@@ -29,21 +28,7 @@ class Telefone # Telefone é uma classe que foi definido com o modulo "class" (c
   end
 
   def tipo_fone
-    if @tipo <= 1
-      return "Residencial"
-    elsif @tipo == 2
-      return "Comercial"
-    else @tipo >= 3
-      return "Celular"
-    end
+    fone = {1 => "residencial", 2 => "comercial", 3 => "celular"}
+    return fone[@tipo]
   end
 end
-
-
-
-
-
-
-#fone1 = Telefone.new(4130553734, 1)
-#fone2 = Telefone.new(4130442099, 2)
-#fone3 = Telefone.new(4197924292, 3)
