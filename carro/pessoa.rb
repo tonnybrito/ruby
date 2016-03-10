@@ -84,3 +84,10 @@ class Pessoa < Telefone
   end
 end
 
+
+
+
+
+#fones = [4130442099, 4130553734, 4198755876, 4197924292]
+#nasc = Date.new(1964, 8, 12)
+#pessoa1 = Pessoa.new("Antonio", "Brito", fones, "colombo", "batel", nasc)

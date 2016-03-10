@@ -2,8 +2,7 @@
 
 # Usar ARRAY para chamar varios parametros de uma variavel
 
-
-
+ tipo = [0, "Telefone residencial", "Telefone comercial", "Telefone celular"]
 =begin
 
 ARRAY = SIGNIFICADO "ARRANJO" SERVE PARA COMPOR UMA LISTA DE OBJETOS
