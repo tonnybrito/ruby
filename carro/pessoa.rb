@@ -44,20 +44,20 @@ class Pessoa
   end
 
   def fone_res
-    res_fone = phones.select { |k| k.residencial?}
-    lista = res_fone.map { |res| res.num_phone }
+    fones = phones.select { |k| k.residencial?}
+    lista = fones.map { |fone| fone.num_phone }
     return lista.join(", ")
   end
 
   def fone_com
-     com_fone =  phones.select { |k| k.comercial? }
-     lista = com_fone.map { |com| com.num_phone }
+     fones =  phones.select { |k| k.comercial? }
+     lista = fones.map { |fone| fone.num_phone }
     return lista.join(", ")
   end
 
   def fone_cel
-    cel_fone =  phones.select { |f| f.celular? }
-    lista = cel_fone.map { |cel| cel.num_phone }
+    fones =  phones.select { |f| f.celular? }
+    lista = fones.map { |fone| fone.num_phone }
     return lista.join(", ")
   end
 
