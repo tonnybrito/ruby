@@ -26,6 +26,7 @@ pessoa1 = Pessoa.new("Antonio", "Brito", fones, "colombo", "batel", nasc)
 puts pessoa1.tels
 
 
+
 #===================================================================================================
 #USANDO .EACH
 #criando o array
@@ -116,7 +117,9 @@ lista_formatada.class
 #======================================================================
 
 
-
+fone1 = Telefone.new(4130553734, 1)
+fone2 = Telefone.new(4130442099, 2)
+fone3 = Telefone.new(4197924292, 3)
 
 
 

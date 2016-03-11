@@ -15,25 +15,18 @@
 #   * Calcular a idade da pessoa
 #   * Mostrar o endereço da pesss.
 # AULA 03
-# CHAMAR A CLASSE TELEFONE (telefone.rb) NA CLASSE PESSOA (pessoa.rb)
-
-
+# CHAMAR A CLASSE TELEFONE (telefone.rb) NA CLASSE PESSOA (pess
 require 'date'
 require 'time'
 require './telefone'
 
-class Pessoa < Telefone
+class Pessoa
   attr_accessor :pri_nome, :ult_nome, :phones, :end_com, :end_res, :data_nasc #atributos
 
-  def initialize(p_nome, u_nome, t_fones, add_res, add_com, dt_nasc) #parametros
+  def initialize(p_nome, u_nome, add_res, add_com, dt_nasc) #parametros
     @pri_nome = p_nome
     @ult_nome = u_nome
     @phones = []
-    # O bloco t_fones cria o parametro (indice_telefonico), este recebe o metodo incluir_fone, que tem o parametro (novo_numero), este parametro cria um objeto da
-    # calsse Telefone, e empurra (push) para o atributo @phones.
-    t_fones.each do |indice_telefonico|
-      incluir_fone(indice_telefonico)
-    end
     @end_com = add_com
     @end_res = add_res
     @data_nasc = dt_nasc  # O atributo recebe valor do parametro
@@ -78,29 +71,8 @@ class Pessoa < Telefone
 
   # metodo incluir_fone usa o parametro novo_numero para criar um objeto da classe telefone.
   # ele empurra (push) o objeto criado para o atributo @phones (que é um array).
-  def incluir_fone (novo_numero)
-    telefone = Telefone.new(novo_numero)
+  def incluir_fone_res (novo_numero)
+    telefone = Telefone.new(novo_numero, 1)
     @phones.push(telefone)
   end
 end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#fones = [4130442099, 4130553734, 4198755876, 4197924292]
-#nasc = Date.new(1964, 8, 12)
-#pessoa1 = Pessoa.new("Antonio", "Brito", fones, "colombo", "batel", nasc)
