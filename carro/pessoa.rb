@@ -40,7 +40,25 @@ class Pessoa
 
   def tels
     lista = phones.map { |telef| (telef.num_phone) }
-    return " os telefones do sr. #{pri_nome} #{ult_nome} são: #{lista.join(", ")}"
+    return lista.join(", ")
+  end
+
+  def fone_res
+    res_fone = phones.select { |k| k.residencial?}
+    lista = res_fone.map { |res| res.num_phone }
+    return lista.join(", ")
+  end
+
+  def fone_com
+     com_fone =  phones.select { |k| k.comercial? }
+     lista = com_fone.map { |com| com.num_phone }
+    return lista.join(", ")
+  end
+
+  def fone_cel
+    cel_fone =  phones.select { |f| f.celular? }
+    lista = cel_fone.map { |cel| cel.num_phone }
+    return lista.join(", ")
   end
 
   def end_resid

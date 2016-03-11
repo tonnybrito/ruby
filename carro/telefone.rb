@@ -20,11 +20,15 @@ class Telefone # Telefone é uma classe que foi definido com o modulo "class" (c
   end
 
   def celular? # definindo o metodo = (celular?) - ao ser chamado responderá pelas variantes  tel_1 e tel_2  se é falso ou verdadeiro o numero do celular
-    if @phone.to_s.slice(2).to_i >= 7 #usando o slice() - informando o numero 2 solicito ao parametro que identifique se o 3º digito é = ou maior que 7
-      return true
-    else
-      return false #"O numero #{num_phone} é um telefone FIXO"
-    end
+    return @tipo == 3
+  end
+
+  def residencial?
+    return @tipo == 1
+  end
+
+  def comercial?
+    return @tipo == 2
   end
 
   def tipo_fone

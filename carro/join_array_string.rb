@@ -20,14 +20,20 @@ lista_telef.class
 
 
 
-fones = [4130442099, 4130553734, 4198755876, 4197924292]
 nasc = Date.new(1964, 8, 12)
-pessoa1 = Pessoa.new("Antonio", "Brito", fones, "colombo", "batel", nasc)
-puts pessoa1.tels
+pessoa = Pessoa.new("Antonio", "Brito", "Colombo", "Batel", nasc)
+ pessoa.incluir_fone_res(4130553734)
+ pessoa.incluir_fone_com(4130442099)
+ pessoa.incluir_fone_cel(4198755876)
+ pessoa.incluir_fone_cel(4197924292)
 
 
 
-#===================================================================================================
+ tels.select {|f| f.celular? }
+
+
+
+==================================================================================================
 #USANDO .EACH
 #criando o array
 meu_array = []
