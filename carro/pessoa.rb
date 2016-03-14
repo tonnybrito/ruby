@@ -90,17 +90,21 @@ class Pessoa
   # metodo incluir_fone usa o parametro novo_numero para criar um objeto da classe telefone.
   # ele empurra (push) o objeto criado para o atributo @phones (que é um array).
   def incluir_fone_res (novo_num_res)
-    telefone_res = Telefone.new(novo_num_res, 1)
-    @phones.push(telefone_res)
+    incluir_fone(novo_num_res, 1)
   end
 
   def incluir_fone_com (novo_num_com)
-    telefone_com = Telefone.new(novo_num_com, 2)
-    @phones.push(telefone_com)
+    incluir_fone(novo_num_com, 2)
   end
 
   def incluir_fone_cel (novo_num_cel)
-    telefone_cel = Telefone.new(novo_num_cel, 3)
-    @phones.push(telefone_cel)
+    incluir_fone(novo_num_cel, 3)
+  end
+
+  private
+
+  def incluir_fone (fone, tipo)
+    item = Telefone.new(fone, tipo)
+    @phones.push(item)
   end
 end
