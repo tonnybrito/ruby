@@ -43,23 +43,6 @@ class Pessoa
     return lista.join(", ")
   end
 
-  def fone_res
-    fones = phones.select { |k| k.residencial?}
-    lista = fones.map { |fone| fone.num_phone }
-    return lista.join(", ")
-  end
-
-  def fone_com
-     fones =  phones.select { |k| k.comercial? }
-     lista = fones.map { |fone| fone.num_phone }
-    return lista.join(", ")
-  end
-
-  def fone_cel
-    fones =  phones.select { |f| f.celular? }
-    lista = fones.map { |fone| fone.num_phone }
-    return lista.join(", ")
-  end
 
   def end_resid
     return "O endereço residencial é: #{@end_res}"
@@ -101,7 +84,27 @@ class Pessoa
     incluir_fone(novo_num_cel, 3)
   end
 
+  def fone_res
+    fone_ident(1)
+  end
+
+  def fone_com
+     fone_ident(2)
+  end
+
+  def fone_cel
+    fone_ident(3)
+  end
+
+
   private
+
+  def fone_ident (ident)
+    fones =  phones.select { |f| f.tipo == ident }
+    lista = fones.map { |fone| fone.num_phone }
+    return lista.join(", ")
+  end
+
 
   def incluir_fone (fone, tipo)
     item = Telefone.new(fone, tipo)
