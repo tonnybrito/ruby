@@ -67,7 +67,7 @@ class Pessoa
   end
 
   def dados_pessoais
-    return " Nome: #{nome_inteiro}, #{tels}, Endereços: Endereço residencial: #{@end_res}, Endereço Comercial: #{@end_com}, sua data de nasc: #{data_nascimento}"
+    return " Nome: #{nome_inteiro}, telefones: Residencial: #{fone_res},  Comercial: #{fone_com},  Celular: #{fone_cel}, Endereços: Endereço residencial: #{@end_res}, Endereço Comercial: #{@end_com}, sua data de nasc: #{data_nascimento}"
   end
 
   # metodo incluir_fone usa o parametro novo_numero para criar um objeto da classe telefone.
@@ -104,7 +104,6 @@ class Pessoa
     lista = fones.map { |fone| fone.num_phone }
     return lista.join(", ")
   end
-
 
   def incluir_fone (fone, tipo)
     item = Telefone.new(fone, tipo)
