@@ -28,7 +28,12 @@ class Endereco
   end
 
   def end_completo
-    end_comp = { :logradouro => logradouro, :bairro => bairro, :localidade => localidade, :cep => cep }
+    end_comp = {
+      :logradouro => logradouro,
+      :bairro     => bairro,
+      :localidade => localidade,
+      :cep        => cep
+    }
     return end_comp
   end
 end

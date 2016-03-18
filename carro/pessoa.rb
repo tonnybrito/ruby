@@ -19,6 +19,7 @@
 require 'date'
 require 'time'
 require './telefone'
+require './endereco'
 
 class Pessoa
   attr_accessor :pri_nome, :ult_nome, :phones, :end_com, :end_res, :data_nasc #atributos
@@ -29,9 +30,7 @@ class Pessoa
     @phones = []
     @end_com = add_com
     @end_res = add_res
-    @data_nasc = dt_nasc  # O atributo recebe valor do parametro
-    #atributo    parametro
-    #         = (recebe)
+    @data_nasc = dt_nasc
   end
 
   def nome_inteiro
@@ -67,7 +66,18 @@ class Pessoa
   end
 
   def dados_pessoais
-    return " Nome: #{nome_inteiro}, telefones: Residencial: #{fone_res},  Comercial: #{fone_com},  Celular: #{fone_cel}, Endereços: Endereço residencial: #{@end_res}, Endereço Comercial: #{@end_com}, sua data de nasc: #{data_nascimento}"
+    dados_pessoais = {
+      :nome             => nome_inteiro,
+      :data_nascimento  => data_nascimento,
+      :idade            => calcula_idade,
+      :telefones        => {
+        :residencial  => fone_res,
+        :comercial    => fone_com,
+        :celular      => fone_cel
+      }
+    }
+
+    return dados_pessoais
   end
 
   # metodo incluir_fone usa o parametro novo_numero para criar um objeto da classe telefone.
@@ -85,23 +95,28 @@ class Pessoa
   end
 
   def fone_res
-    fone_ident(1)
+    fone_array(1)
   end
 
   def fone_com
-     fone_ident(2)
+    fone_array(2)
   end
 
   def fone_cel
-    fone_ident(3)
+    fone_array(3)
   end
 
   private
 
   def fone_ident (ident)
-    fones =  phones.select { |f| f.tipo == ident }
-    lista = fones.map { |fone| fone.num_phone }
+    lista = fone_array(ident)
     return lista.join(", ")
+  end
+
+  def fone_array (array)
+    fones =  phones.select { |f| f.tipo == array }
+    lista = fones.map { |fone| fone.num_phone }
+    return lista
   end
 
   def incluir_fone (fone, tipo)

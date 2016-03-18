@@ -32,7 +32,11 @@ class Telefone # Telefone é uma classe que foi definido com o modulo "class" (c
   end
 
   def tipo_fone
-    fone = {1 => "residencial", 2 => "comercial", 3 => "celular"}
+    fone = {
+      1 => "residencial",
+      2 => "comercial",
+      3 => "celular"
+    }
     return fone[@tipo]
   end
 end
