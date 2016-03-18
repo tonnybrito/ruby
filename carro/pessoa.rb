@@ -96,7 +96,6 @@ class Pessoa
     fone_ident(3)
   end
 
-
   private
 
   def fone_ident (ident)

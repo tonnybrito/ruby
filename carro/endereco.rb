@@ -15,7 +15,7 @@ class Endereco
   end
 
   def logradouro
-    return "#{@rua}, #{@num}, #{@compl}"
+    return "#{@rua}, #{@num} - #{@compl}"
   end
 
   def localidade
@@ -28,7 +28,7 @@ class Endereco
   end
 
   def end_completo
-    end_comp = [ logradouro, bairro, localidade, cep ]
+    end_comp = { :logradouro => logradouro, :bairro => bairro, :localidade => localidade, :cep => cep }
     return end_comp
   end
 end
