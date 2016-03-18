@@ -22,14 +22,13 @@ require './telefone'
 require './endereco'
 
 class Pessoa
-  attr_accessor :pri_nome, :ult_nome, :phones, :end_com, :end_res, :data_nasc #atributos
+  attr_accessor :pri_nome, :ult_nome, :phones, :enderecos, :data_nasc #atributos
 
-  def initialize(p_nome, u_nome, add_res, add_com, dt_nasc) #parametros
+  def initialize(p_nome, u_nome, dt_nasc) #parametros
     @pri_nome = p_nome
     @ult_nome = u_nome
     @phones = []
-    @end_com = add_com
-    @end_res = add_res
+    @enderecos = []
     @data_nasc = dt_nasc
   end
 
@@ -40,15 +39,6 @@ class Pessoa
   def tels
     lista = phones.map { |telef| (telef.num_phone) }
     return lista.join(", ")
-  end
-
-
-  def end_resid
-    return "O endereço residencial é: #{@end_res}"
-  end
-
-  def end_comerc
-    return "O endereço comercial é: #{@end_com}"
   end
 
   def mostre_data_nasc
@@ -104,6 +94,17 @@ class Pessoa
 
   def fone_cel
     fone_array(3)
+  end
+
+  def incluir_endereco (rua, numero, complemento, bairro, cidade, estado, pais, cep)
+    item = Endereco.new(rua, numero, complemento, bairro, cidade, estado, pais, cep)
+    @enderecos.push(item)
+  end
+
+  def endereco_array (end_array)
+    endereco =  enderecos.select { |f| f == end_array }
+    lista = endereco.map { |log| log.end_completo}
+    return lista
   end
 
   private
