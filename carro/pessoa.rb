@@ -22,7 +22,7 @@ require './telefone'
 require './endereco'
 
 class Pessoa
-  attr_accessor :pri_nome, :ult_nome, :phones, :enderecos, :data_nasc #atributos
+  attr_accessor :pri_nome, :ult_nome, :phones, :enderecos, :data_nasc#atributos
 
   def initialize(p_nome, u_nome, dt_nasc) #parametros
     @pri_nome = p_nome
@@ -60,6 +60,7 @@ class Pessoa
       :nome             => nome_inteiro,
       :data_nascimento  => data_nascimento,
       :idade            => calcula_idade,
+      :enderecos        => enderecos_completos,
       :telefones        => {
         :residencial  => fone_res,
         :comercial    => fone_com,
@@ -101,12 +102,6 @@ class Pessoa
     @enderecos.push(item)
   end
 
-  def endereco_array (end_array)
-    endereco =  enderecos.select { |f| f == end_array }
-    lista = endereco.map { |log| log.end_completo}
-    return lista
-  end
-
   private
 
   def fone_ident (ident)
@@ -123,5 +118,10 @@ class Pessoa
   def incluir_fone (fone, tipo)
     item = Telefone.new(fone, tipo)
     @phones.push(item)
+  end
+
+  def enderecos_completos
+    lista = enderecos.map { |telef| (telef.end_completo) }
+    return lista
   end
 end
