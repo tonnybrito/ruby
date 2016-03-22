@@ -63,11 +63,15 @@ class Pessoa
       :nome             => nome_inteiro,
       :data_nascimento  => data_nascimento,
       :idade            => calcula_idade,
-      :enderecos        => enderecos_completos,
+      :enderecos        => {
+        :residencial    => end_res,
+        :comercial      => end_com,
+        :postal         => end_postal
+      },
       :telefones        => {
-        :residencial  => fone_res,
-        :comercial    => fone_com,
-        :celular      => fone_cel
+        :residencial    => fone_res,
+        :comercial      => fone_com,
+        :celular        => fone_cel
       }
     }
     return dados_pessoais
