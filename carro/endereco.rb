@@ -18,15 +18,8 @@ class Endereco
   def logradouro
     lograd  = "#{@rua}"
 
-
-   #unless @num.to_s.strip.empty?
-    if !(@num.to_s.strip.empty?)
-      lograd << ", #{@num}"
-    end
-
-    if !(@compl.to_s.strip)
-      lograd << " - #{@compl}"
-    end
+    lograd << ", #{@num}" unless @num.to_s.strip.empty?
+    lograd << " - #{@compl}" unless @compl.to_s.strip.empty?
 
     return lograd
   end
