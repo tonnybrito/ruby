@@ -147,8 +147,8 @@ class Pessoa
 
   def enderecos_completos (tipo)
     lista = enderecos.select { |list| list.tipo_end == tipo }
-    teste = lista.map {|endereco| endereco.end_completo}
-    return teste
+    format_end = lista.map {|endereco| endereco.end_completo}
+    return format_end
   end
 
   def incluir_endereco (end_tipo, rua, numero, complemento, bairro, cidade, estado, pais, cep)
