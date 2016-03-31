@@ -18,11 +18,13 @@ class Endereco
   def logradouro
     lograd  = "#{@rua}"
 
-    if @num != " "and @num != nil
+
+   #if (@num != " ") and (@num != nil) and (@num.to_s.strip != "")
+    if @num.to_s.strip != ""
       lograd << ", #{@num}"
     end
 
-    if @compl != " "  and @compl != nil
+    if @compl.to_s.strip != ""
       lograd << " - #{@compl}"
     end
 
@@ -58,19 +60,26 @@ class Endereco
   end
 end
 
+
 =begin
 
-require './endereco'
+  if @num != @compl or @compl == false
+      lograd << ", #{@num}"
+    end
 
-endereco1 = Endereco.new( 1, "rua Guilherme Rodbard", 139, "Apto: 41", "Campo Pequeno", "Colombo", "Paraná", "Brasil", 83406580)
-endereco2 = Endereco.new( 2, "rua Buenos Aires", 444, "sala 65", "Batel", "Curitiba", "Paraná", "Brasil", 80250070)
-endereco3 = Endereco.new( 3, "caixa postal 10", " ", " ", " ", "Curitiba", "Paraná", "Brasil", 80011970)
-endereco4 = Endereco.new( 3, "rua Guilherme Rodbard", 139, "Apto: 41", "Campo Pequeno", "Colombo", "Paraná", "Brasil", 83406580)
-endereco5 = Endereco.new( 2, "rua Jucelino Kubitschek de Oliveira", 3250, nil, "Cidade Industrial", "Curitiba", "Paraná", "Brasil", 82345678)
-endereco6 = Endereco.new( 3, "caixa postal 10", nil, nil, nil, "Curitiba", "Paraná", "Brasil", 80011970)
-endereco7 = Endereco.new( 3, "caixa postal 10", "", "", "", "Curitiba", "Paraná", "Brasil", 80011970)
-endereco8 = Endereco.new( 3, "caixa postal 10", nil, " ", "", "Curitiba", "Paraná", "Brasil", 80011970)
-endereco9 = Endereco.new( 3, "caixa postal 10", "  ", "", "", "Curitiba", "Paraná", "Brasil", 80011970)
+    if @compl != @num and compl != nil
+      lograd << " - #{@compl}"
+    end
+
+    -------------------------------------------------
+
+    if @num != " " and @num != nil
+      lograd << ", #{@num}"
+    end
+
+    if @compl != " " and @compl == false and @compl != nil
+      lograd << " - #{@compl}"
+    end
+
 
 =end
-
