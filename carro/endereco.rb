@@ -19,12 +19,12 @@ class Endereco
     lograd  = "#{@rua}"
 
 
-   #if (@num != " ") and (@num != nil) and (@num.to_s.strip != "")
-    if @num.to_s.strip != ""
+   #unless @num.to_s.strip.empty?
+    if !(@num.to_s.strip.empty?)
       lograd << ", #{@num}"
     end
 
-    if @compl.to_s.strip != ""
+    if !(@compl.to_s.strip)
       lograd << " - #{@compl}"
     end
 
