@@ -1,23 +1,7 @@
+# AULA 4
 #!/usr/bin/env ruby
 # encoding: utf-8
-# AULA 02
-# Fazer uma classe para representar pessoas.
-# O construtor deve receber os seguintes parâmetros e definir aos respectivos atributos da classe:
-#   * Primeiro nome
-#   * Último nome
-#   * Telefone residencial
-#   * Telefne comercial
-#   * Telefone celular
-#   * Data de nascimento
-#   * Endereço
-#
-# A classe deverá possuir métodos para:
-#   * Mostrar o nome completo ( Primeiro nome + Último nome)
-#   * Mostrar todos os telefones
-#   * Calcular a idade da pessoa
-#   * Mostrar o endereço da pesss.
-# AULA 03
-# CHAMAR A CLASSE TELEFONE (telefone.rb) NA CLASSE PESSOA (pess
+
 require 'net/http'
 require 'date'
 require 'time'
@@ -25,9 +9,9 @@ require './telefone'
 require './endereco'
 
 class Pessoa
-  attr_accessor :pri_nome, :ult_nome, :phones, :enderecos, :data_nasc#atributos
+  attr_accessor :pri_nome, :ult_nome, :phones, :enderecos, :data_nasc
 
-  def initialize(p_nome, u_nome, dt_nasc) #parametros
+  def initialize(p_nome, u_nome, dt_nasc)
     @pri_nome = p_nome
     @ult_nome = u_nome
     @phones = []
@@ -53,7 +37,6 @@ class Pessoa
     return  data - @data_nasc.year
   end
 
-  # retornar a data de nascimento no formato  ??/??/???? "12/08/1964"
   def data_nascimento
     return @data_nasc.strftime('%d/%m/%Y')
   end
@@ -77,8 +60,6 @@ class Pessoa
     return dados_pessoais
   end
 
-  # metodo incluir_fone usa o parametro novo_numero para criar um objeto da classe telefone.
-  # ele empurra (push) o objeto criado para o atributo @phones (que é um array).
   def incluir_fone_res (novo_num_res)
     incluir_fone(novo_num_res, 1)
   end

@@ -1,3 +1,4 @@
+# AULA 3
 # encoding: utf-8
 class Endereco
 
@@ -17,10 +18,8 @@ class Endereco
 
   def logradouro
     lograd  = "#{@rua}"
-
     lograd << ", #{@num}" unless @num.to_s.strip.empty?
     lograd << " - #{@compl}" unless @compl.to_s.strip.empty?
-
     return lograd
   end
 
@@ -52,27 +51,3 @@ class Endereco
     return endereco[@tipo_end]
   end
 end
-
-
-=begin
-
-  if @num != @compl or @compl == false
-      lograd << ", #{@num}"
-    end
-
-    if @compl != @num and compl != nil
-      lograd << " - #{@compl}"
-    end
-
-    -------------------------------------------------
-
-    if @num != " " and @num != nil
-      lograd << ", #{@num}"
-    end
-
-    if @compl != " " and @compl == false and @compl != nil
-      lograd << " - #{@compl}"
-    end
-
-
-=end
