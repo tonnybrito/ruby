@@ -10,28 +10,39 @@ class Carro
     @cor = p_cor
   end
 
-  def mostra_marca
-    return "este carro é da marca #{@marca}"
+  def marca
+    return "#{@marca}"
   end
 
-  def mostra_modelo
-    return "o modelo deste carro é #{@modelo}"
+  def modelo
+    return "#{@modelo}"
   end
 
-  def mostra_ano
-    return "o ano deste carro é #{@ano}"
+  def ano
+    return "#{@ano}"
   end
 
-  def mostra_cor
-    return "a cor deste carro é #{cor}"
+  def cor
+    return "#{cor}"
   end
 
-  def calcula_idade
-    ano_atual = Time.now.strftime("%Y").to_i
-    return ano_atual - @ano
+  def idade
+    ano_atual = Time.now.strftime("%Y").to_i - @ano
+
+    if ano_atual <= 1
+      return "#{ano_atual} ano"
+    else
+      return "#{ano_atual} anos"
+    end
   end
 
-  def mostra_carro
-    return "O carro é um #{@marca}, modelo: #{@modelo}, ano: #{@ano}, ele é #{@cor}, e tem #{calcula_idade} anos de fabricação"
+  def dados_veiculo
+    carro = {
+      :marca     => marca,
+      :modelo    => modelo,
+      :ano       => ano,
+      :cor       => modelo,
+      :idade     => idade
+    }
   end
 end
