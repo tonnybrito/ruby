@@ -28,21 +28,15 @@ class Carro
 
   def idade
     ano_atual = Time.now.strftime("%Y").to_i - @ano
-
-    if ano_atual <= 1
-      return "#{ano_atual} ano"
-    else
-      return "#{ano_atual} anos"
-    end
   end
 
   def dados_veiculo
     carro = {
-      :marca     => marca,
-      :modelo    => modelo,
-      :ano       => ano,
-      :cor       => modelo,
-      :idade     => idade
+      :marca          => marca,
+      :modelo         => modelo,
+      :ano            => ano,
+      :cor            => modelo,
+      :idade_veiculo  => idade
     }
   end
 end
