@@ -1,5 +1,4 @@
-# AULA 01
-
+#
 class Carro
   attr_accessor :marca, :modelo, :ano, :cor
 
@@ -10,33 +9,17 @@ class Carro
     @cor = p_cor
   end
 
-  def marca
-    return "#{@marca}"
-  end
-
-  def modelo
-    return "#{@modelo}"
-  end
-
-  def ano
-    return "#{@ano}"
-  end
-
-  def cor
-    return "#{cor}"
-  end
-
   def idade
-    ano_atual = Time.now.strftime("%Y").to_i - @ano
+    Time.now.strftime('%Y').to_i - @ano
   end
 
   def dados_veiculo
-    carro = {
-      :marca          => marca,
-      :modelo         => modelo,
-      :ano            => ano,
-      :cor            => modelo,
-      :idade_veiculo  => idade
+    {
+      marca:          marca,
+      modelo:         modelo,
+      ano:            ano,
+      cor:            modelo,
+      idade_veiculo:  idade
     }
   end
 end
