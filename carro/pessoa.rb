@@ -1,5 +1,4 @@
 # AULA 4
-#!/usr/bin/env ruby
 # encoding: utf-8
 
 require 'net/http'
@@ -7,7 +6,7 @@ require 'date'
 require 'time'
 require './telefone'
 require './endereco'
-
+# Pessoa
 class Pessoa
   attr_accessor :pri_nome, :ult_nome, :phones, :enderecos, :data_nasc
 
@@ -20,55 +19,44 @@ class Pessoa
   end
 
   def nome_inteiro
-    return "#{@pri_nome} #{@ult_nome}"
+    "#{@pri_nome} #{@ult_nome}"
   end
 
   def tels
-    lista = phones.map { |telef| (telef.num_phone) }
-    return lista.join(", ")
+    lista = phones.map(&:num_phone)
+    lista.join(', ')
   end
 
   def mostre_data_nasc
-    return "a data de nascimento é: #{@data_nasc}"
+    "a data de nascimento é: #{@data_nasc}"
   end
 
   def calcula_idade
     data = Time.new.to_date.year
-    return  data - @data_nasc.year
+    data - @data_nasc.year
   end
 
   def data_nascimento
-    return @data_nasc.strftime('%d/%m/%Y')
+    @data_nasc.strftime('%d/%m/%Y')
   end
 
   def dados_pessoais
-    dados_pessoais = {
-      :nome             => nome_inteiro,
-      :data_nascimento  => data_nascimento,
-      :idade            => calcula_idade,
-      :enderecos        => {
-        :residencial   => end_res,
-        :comercial     => end_com,
-        :postal        => end_postal
-      },
-      :telefones        => {
-        :residencial   => fone_res,
-        :comercial     => fone_com,
-        :celular       => fone_cel
-      }
-    }
-    return dados_pessoais
+    { nome:             nome_inteiro,
+      data_nascimento:  data_nascimento,
+      idade:            calcula_idade,
+      list_end:         list_end,
+      list_fones:       list_fones }
   end
 
-  def incluir_fone_res (novo_num_res)
+  def incluir_fone_res(novo_num_res)
     incluir_fone(novo_num_res, 1)
   end
 
-  def incluir_fone_com (novo_num_com)
+  def incluir_fone_com(novo_num_com)
     incluir_fone(novo_num_com, 2)
   end
 
-  def incluir_fone_cel (novo_num_cel)
+  def incluir_fone_cel(novo_num_cel)
     incluir_fone(novo_num_cel, 3)
   end
 
@@ -84,16 +72,16 @@ class Pessoa
     fone_array(3)
   end
 
-  def incluir_end_res (end_tipo, rua, numero, complemento, bairro, cidade, estado, pais, cep)
-   incluir_endereco(end_tipo, rua, numero, complemento, bairro, cidade, estado, pais, cep)
+  def incluir_end_res(end_tipo)
+    incluir_endereco(end_tipo)
   end
 
-  def incluir_end_com (end_tipo, rua, numero, complemento, bairro, cidade, estado, pais, cep)
-   incluir_endereco(end_tipo, rua, numero, complemento, bairro, cidade, estado, pais, cep)
+  def incluir_end_com(end_tipo)
+    incluir_endereco(end_tipo)
   end
 
-  def incluir_end_postal (end_tipo, rua, numero, complemento, bairro, cidade, estado, pais, cep)
-   incluir_endereco(end_tipo, rua, numero, complemento, bairro, cidade, estado, pais, cep)
+  def incluir_end_postal(end_tipo)
+    incluir_endereco(end_tipo)
   end
 
   def end_res
@@ -110,30 +98,42 @@ class Pessoa
 
   private
 
-  def fone_ident (ident)
+  def fone_ident(ident)
     lista = fone_array(ident)
-    return lista.join(", ")
+    lista.join(', ')
   end
 
-  def fone_array (array)
-    fones =  phones.select { |f| f.tipo == array }
-    lista = fones.map { |fone| fone.num_phone }
-    return lista
+  def fone_array(array)
+    fones = phones.select { |f| f.tipo == array }
+    lista = fones.map(&:num_phone)
+    lista
   end
 
-  def incluir_fone (fone, tipo)
+  def incluir_fone(fone, tipo)
     item = Telefone.new(fone, tipo)
     @phones.push(item)
   end
 
-  def enderecos_completos (tipo)
+  def enderecos_completos(tipo)
     lista = enderecos.select { |list| list.tipo_end == tipo }
-    format_end = lista.map {|endereco| endereco.end_completo}
-    return format_end
+    format_end = lista.map(&:end_completo)
+    format_end
   end
 
-  def incluir_endereco (end_tipo, rua, numero, complemento, bairro, cidade, estado, pais, cep)
-    item = Endereco.new(end_tipo, rua, numero, complemento, bairro, cidade, estado, pais, cep)
+  def incluir_endereco(end_tipo)
+    item = Endereco.new(end_tipo)
     @enderecos.push(item)
+  end
+
+  def list_end
+    { residencial:   end_res,
+      comercial:     end_com,
+      postal:        end_postal }
+  end
+
+  def list_fones
+    { residencial:   fone_res,
+      comercial:     fone_com,
+      celular:       fone_cel }
   end
 end
