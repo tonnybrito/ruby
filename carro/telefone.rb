@@ -10,10 +10,8 @@ class Telefone
   end
 
   def num_phone
-    num_phone = ''
-    num_phone << "(#{@phone.to_s.slice(0..1)})"
-    num_phone << "#{@phone.to_s.slice(2..5)}"
-    num_phone << "-#{@phone.to_s.slice(6..9)}"
+    fn = @phone.to_s
+    "(#{fn.slice(0..1)})#{fn.slice(2..5)}-#{fn.slice(6..9)}"
   end
 
   def residencial?

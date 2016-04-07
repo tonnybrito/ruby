@@ -1,4 +1,3 @@
-# AULA 4
 # encoding: utf-8
 
 require 'net/http'
@@ -6,8 +5,10 @@ require 'date'
 require 'time'
 require './telefone'
 require './endereco'
+require './pessoa_private'
+
 # Pessoa
-class Pessoa
+class Pessoa < PessoaPrivate
   attr_accessor :pri_nome, :ult_nome, :phones, :enderecos, :data_nasc
 
   def initialize(p_nome, u_nome, dt_nasc)
@@ -27,10 +28,6 @@ class Pessoa
     lista.join(', ')
   end
 
-  def mostre_data_nasc
-    "a data de nascimento é: #{@data_nasc}"
-  end
-
   def calcula_idade
     data = Time.new.to_date.year
     data - @data_nasc.year
@@ -41,11 +38,13 @@ class Pessoa
   end
 
   def dados_pessoais
-    { nome:             nome_inteiro,
+    {
+      nome:             nome_inteiro,
       data_nascimento:  data_nascimento,
       idade:            calcula_idade,
       list_end:         list_end,
-      list_fones:       list_fones }
+      list_fones:       list_fones
+    }
   end
 
   def incluir_fone_res(novo_num_res)
@@ -94,46 +93,5 @@ class Pessoa
 
   def end_postal
     enderecos_completos(3)
-  end
-
-  private
-
-  def fone_ident(ident)
-    lista = fone_array(ident)
-    lista.join(', ')
-  end
-
-  def fone_array(array)
-    fones = phones.select { |f| f.tipo == array }
-    lista = fones.map(&:num_phone)
-    lista
-  end
-
-  def incluir_fone(fone, tipo)
-    item = Telefone.new(fone, tipo)
-    @phones.push(item)
-  end
-
-  def enderecos_completos(tipo)
-    lista = enderecos.select { |list| list.tipo_end == tipo }
-    format_end = lista.map(&:end_completo)
-    format_end
-  end
-
-  def incluir_endereco(end_tipo)
-    item = Endereco.new(end_tipo)
-    @enderecos.push(item)
-  end
-
-  def list_end
-    { residencial:   end_res,
-      comercial:     end_com,
-      postal:        end_postal }
-  end
-
-  def list_fones
-    { residencial:   fone_res,
-      comercial:     fone_com,
-      celular:       fone_cel }
   end
 end
