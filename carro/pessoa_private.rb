@@ -1,8 +1,5 @@
-require './telefone'
-require './pessoa'
-require './endereco'
 # classe Pessoa
-class PessoaPrivate
+module PessoaPrivate
   private
 
   def fone_ident(ident)

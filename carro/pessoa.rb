@@ -8,7 +8,8 @@ require './endereco'
 require './pessoa_private'
 
 # Pessoa
-class Pessoa < PessoaPrivate
+class Pessoa
+  include PessoaPrivate
   attr_accessor :pri_nome, :ult_nome, :phones, :enderecos, :data_nasc
 
   def initialize(p_nome, u_nome, dt_nasc)
