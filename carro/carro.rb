@@ -1,4 +1,4 @@
-#
+# Carro
 class Carro
   attr_accessor :marca, :modelo, :ano, :cor
 
@@ -10,6 +10,7 @@ class Carro
   end
 
   def idade
+    return 0 if @ano != true && @ano.to_s.strip.empty?
     Time.now.strftime('%Y').to_i - @ano
   end
 
