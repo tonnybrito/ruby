@@ -50,4 +50,213 @@ describe Carro do
       end
     end
   end
+
+  describe '#dados_veiculo' do
+    context 'quando todos os dados estiverem corretos' do
+      it 'retorne OK' do
+        expectativa = {
+          marca:          'Fiat',
+          modelo:         'spacio',
+          ano:            1983,
+          cor:            'azul',
+          idade_veiculo:  33
+        }
+
+        carro = Carro.new('Fiat', 'spacio', 1983, 'azul')
+
+        expect(carro.dados_veiculo).to eql(expectativa)
+        expect(carro.marca).to eql('Fiat')
+      end
+    end
+
+    context 'quando algum dado estiver faltando' do
+      context 'quando não tiver cor' do
+        it 'utilize "não informado" quando for nulo' do
+          expectativa = {
+            marca:          'Fiat',
+            modelo:         'spacio',
+            ano:            1983,
+            cor:            'não informado',
+            idade_veiculo:  33
+          }
+
+          carro = Carro.new('Fiat', 'spacio', 1983, nil)
+
+          expect(carro.dados_veiculo).to eql(expectativa)
+          expect(carro.cor).to eql(nil)
+        end
+
+        it 'utilize "não informado" quando for vazio' do
+          expectativa = {
+            marca:          'Fiat',
+            modelo:         'spacio',
+            ano:            1983,
+            cor:            'não informado',
+            idade_veiculo:  33
+          }
+
+          carro = Carro.new('Fiat', 'spacio', 1983, '')
+
+          expect(carro.dados_veiculo).to eql(expectativa)
+          expect(carro.cor).to eql('')
+        end
+
+        it 'utilize "não informado" quando for 2 espaços vazios' do
+          expectativa = {
+            marca:          'Fiat',
+            modelo:         'spacio',
+            ano:            1983,
+            cor:            'não informado',
+            idade_veiculo:  33
+          }
+
+          carro = Carro.new('Fiat', 'spacio', 1983, '  ')
+
+          expect(carro.dados_veiculo).to eql(expectativa)
+          expect(carro.cor).to eql('  ')
+        end
+      end
+
+      context 'quando não tiver o ano' do
+        it 'utilize "não informado" quando for nulo' do
+          expectativa = {
+            marca:          'Fiat',
+            modelo:         'spacio',
+            ano:            'não informado',
+            cor:            'azul',
+            idade_veiculo:  0
+          }
+
+          carro = Carro.new('Fiat', 'spacio', nil, 'azul')
+
+          expect(carro.dados_veiculo).to eql(expectativa)
+          expect(carro.ano).to eql(nil)
+        end
+
+        it 'utilize "não informado" quando for vazio' do
+          expectativa = {
+            marca:          'Fiat',
+            modelo:         'spacio',
+            ano:            'não informado',
+            cor:            'azul',
+            idade_veiculo:  0
+          }
+
+          carro = Carro.new('Fiat', 'spacio', '', 'azul')
+
+          expect(carro.dados_veiculo).to eql(expectativa)
+          expect(carro.ano).to eql('')
+        end
+
+        it 'utilize "não informado" quando for 2 espaços vazios' do
+          expectativa = {
+            marca:          'Fiat',
+            modelo:         'spacio',
+            ano:            'não informado',
+            cor:            'azul',
+            idade_veiculo:  0
+          }
+
+          carro = Carro.new('Fiat', 'spacio', '  ', 'azul')
+
+          expect(carro.dados_veiculo).to eql(expectativa)
+          expect(carro.ano).to eql('  ')
+        end
+      end
+
+      context 'quando nao tiver modelo' do
+        it 'utilize "não informado" quando for nulo' do
+          expectativa = {
+            marca:          'Fiat',
+            modelo:         'não informado',
+            ano:            1983,
+            cor:            'azul',
+            idade_veiculo:  33
+          }
+
+          carro = Carro.new('Fiat', nil, 1983, 'azul')
+
+          expect(carro.dados_veiculo).to eql(expectativa)
+          expect(carro.modelo).to eql(nil)
+        end
+
+        it 'utilize "não informado" quando for vazio' do
+          expectativa = {
+            marca:          'Fiat',
+            modelo:         'não informado',
+            ano:            1983,
+            cor:            'azul',
+            idade_veiculo:  33
+          }
+
+          carro = Carro.new('Fiat', '', 1983, 'azul')
+
+          expect(carro.dados_veiculo).to eql(expectativa)
+          expect(carro.modelo).to eql('')
+        end
+
+        it 'utilize "não informado" quando for 2 espaços vazios' do
+          expectativa = {
+            marca:          'Fiat',
+            modelo:         'não informado',
+            ano:            1983,
+            cor:            'azul',
+            idade_veiculo:  33
+          }
+
+          carro = Carro.new('Fiat', '  ', 1983, 'azul')
+
+          expect(carro.dados_veiculo).to eql(expectativa)
+          expect(carro.modelo).to eql('  ')
+        end
+      end
+
+      context 'quando nao tiver marca' do
+        it 'utilize "não informado" quando for nulo' do
+          expectativa = {
+            marca:          'não informado',
+            modelo:         'spacio',
+            ano:            1983,
+            cor:            'azul',
+            idade_veiculo:  33
+          }
+
+          carro = Carro.new(nil, 'spacio', 1983, 'azul')
+
+          expect(carro.dados_veiculo).to eql(expectativa)
+          expect(carro.marca).to eql(nil)
+        end
+
+        it 'utilize "não informado" quando for vazio' do
+          expectativa = {
+            marca:          'não informado',
+            modelo:         'spacio',
+            ano:            1983,
+            cor:            'azul',
+            idade_veiculo:  33
+          }
+
+          carro = Carro.new('', 'spacio', 1983, 'azul')
+
+          expect(carro.dados_veiculo).to eql(expectativa)
+          expect(carro.marca).to eql('')
+        end
+
+        it 'utilize "não informado" quando for 2 espaços vazios' do
+          expectativa = {
+            marca:          'não informado',
+            modelo:         'spacio',
+            ano:            1983,
+            cor:            'azul',
+            idade_veiculo:  33
+          }
+
+          carro = Carro.new('  ', 'spacio', 1983, 'azul')
+
+          expect(carro.dados_veiculo).to eql(expectativa)
+          expect(carro.marca).to eql('  ')
+        end
+      end
+    end
+  end
 end

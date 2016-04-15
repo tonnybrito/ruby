@@ -10,17 +10,24 @@ class Carro
   end
 
   def idade
-    return 0 if @ano != true && @ano.to_s.strip.empty?
+    return 0 if @ano.to_s.strip.empty?
+
     Time.now.strftime('%Y').to_i - @ano
   end
 
   def dados_veiculo
     {
-      marca:          marca,
-      modelo:         modelo,
-      ano:            ano,
-      cor:            modelo,
+      marca:          veiculo(marca),
+      modelo:         veiculo(modelo),
+      ano:            veiculo(ano),
+      cor:            veiculo(cor),
       idade_veiculo:  idade
     }
+  end
+
+  private
+
+  def veiculo(valor)
+    valor.to_s.strip.empty? ? 'não informado' : valor
   end
 end
