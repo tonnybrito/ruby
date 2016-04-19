@@ -14,27 +14,27 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2016-04-15T18:30:23+00:00">2016-04-15T18:30:23+00:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2016-04-19T19:35:04+00:00">2016-04-19T19:35:04+00:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">100.0%</span></span>
+    (<span class="covered_percent"><span class="green">97.39%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         12.2
+         3.86
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
-    <b>1</b> files in total.
-    <b>15</b> relevant lines. 
-    <span class="green"><b>15</b> lines covered</span> and
-    <span class="red"><b>0</b> lines missed </span>
+    <b>3</b> files in total.
+    <b>153</b> relevant lines. 
+    <span class="green"><b>149</b> lines covered</span> and
+    <span class="red"><b>4</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -58,6 +58,26 @@
         <td>15</td>
         <td>0</td>
         <td>12.2</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#40e842d18d5608ba3e39a1a50bf0030554e1c068" class="src_link" title="endereco.rb">endereco.rb</a></td>
+        <td class="yellow strong">89.74 %</td>
+        <td>75</td>
+        <td>39</td>
+        <td>35</td>
+        <td>4</td>
+        <td>7.9</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#facfec305e3e39cfd3693136482849eca74259f9" class="src_link" title="spec/endereco_spec.rb">spec/endereco_spec.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>275</td>
+        <td>99</td>
+        <td>99</td>
+        <td>0</td>
+        <td>1.0</td>
       </tr>
       
     </tbody>
@@ -283,6 +303,2142 @@
         </li>
       
         <li class="never" data-hits="" data-linenumber="33">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+      
+        <div class="source_table" id="40e842d18d5608ba3e39a1a50bf0030554e1c068">
+  <div class="header">
+    <h3>endereco.rb</h3>
+    <h4><span class="yellow">89.74 %</span> covered</h4>
+    <div>
+      <b>39</b> relevant lines. 
+      <span class="green"><b>35</b> lines covered</span> and
+      <span class="red"><b>4</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="never" data-hits="" data-linenumber="1">
+          
+          
+          <code class="ruby"># AULA 3</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="2">
+          <span class="hits">1</span>
+          
+          <code class="ruby">class Endereco</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  attr_accessor :tipo_end, :rua, :num, :compl, :bairro,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="4">
+          
+          
+          <code class="ruby">                :cidade, :estado, :pais, :cep</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="5">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="6">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def initialize(options = {})</code>
+        </li>
+      
+        <li class="covered" data-hits="26" data-linenumber="7">
+          <span class="hits">26</span>
+          
+          <code class="ruby">    @tipo_end   = options [:tipo_end]</code>
+        </li>
+      
+        <li class="covered" data-hits="26" data-linenumber="8">
+          <span class="hits">26</span>
+          
+          <code class="ruby">    @rua        = options [:rua]</code>
+        </li>
+      
+        <li class="covered" data-hits="26" data-linenumber="9">
+          <span class="hits">26</span>
+          
+          <code class="ruby">    @num        = options [:num]</code>
+        </li>
+      
+        <li class="covered" data-hits="26" data-linenumber="10">
+          <span class="hits">26</span>
+          
+          <code class="ruby">    @compl      = options [:compl]</code>
+        </li>
+      
+        <li class="covered" data-hits="26" data-linenumber="11">
+          <span class="hits">26</span>
+          
+          <code class="ruby">    @bairro     = options [:bairro]</code>
+        </li>
+      
+        <li class="covered" data-hits="26" data-linenumber="12">
+          <span class="hits">26</span>
+          
+          <code class="ruby">    @cidade     = options [:cidade]</code>
+        </li>
+      
+        <li class="covered" data-hits="26" data-linenumber="13">
+          <span class="hits">26</span>
+          
+          <code class="ruby">    @estado     = options [:estado]</code>
+        </li>
+      
+        <li class="covered" data-hits="26" data-linenumber="14">
+          <span class="hits">26</span>
+          
+          <code class="ruby">    @pais       = options [:pais]</code>
+        </li>
+      
+        <li class="covered" data-hits="26" data-linenumber="15">
+          <span class="hits">26</span>
+          
+          <code class="ruby">    @cep        = options [:cep]</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="16">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="17">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="18">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def logradouro</code>
+        </li>
+      
+        <li class="covered" data-hits="10" data-linenumber="19">
+          <span class="hits">10</span>
+          
+          <code class="ruby">    return &#39;não informado&#39; if @rua.to_s.strip.empty?</code>
+        </li>
+      
+        <li class="covered" data-hits="5" data-linenumber="20">
+          <span class="hits">5</span>
+          
+          <code class="ruby">    lograd = &#39;&#39; &lt;&lt; @rua</code>
+        </li>
+      
+        <li class="covered" data-hits="5" data-linenumber="21">
+          <span class="hits">5</span>
+          
+          <code class="ruby">    lograd &lt;&lt; &quot;, #{@num}&quot; unless @num.to_s.strip.empty?</code>
+        </li>
+      
+        <li class="covered" data-hits="5" data-linenumber="22">
+          <span class="hits">5</span>
+          
+          <code class="ruby">    lograd &lt;&lt; &quot; - #{@compl}&quot; unless @compl.to_s.strip.empty?</code>
+        </li>
+      
+        <li class="covered" data-hits="5" data-linenumber="23">
+          <span class="hits">5</span>
+          
+          <code class="ruby">    lograd</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="24">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="25">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="26">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def bairro</code>
+        </li>
+      
+        <li class="covered" data-hits="4" data-linenumber="27">
+          <span class="hits">4</span>
+          
+          <code class="ruby">    if @bairro.to_s.strip.empty?</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="28">
+          <span class="hits">3</span>
+          
+          <code class="ruby">      &#39;não informado&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="29">
+          
+          
+          <code class="ruby">    else</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="30">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      &quot;#{@bairro}&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="31">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="32">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="33">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="34">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def localidade</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="35">
+          
+          
+          <code class="ruby">    if  @cidade.to_s.strip.empty? || @estado.to_s.strip.empty? \</code>
+        </li>
+      
+        <li class="covered" data-hits="8" data-linenumber="36">
+          <span class="hits">8</span>
+          
+          <code class="ruby">        || @pais.to_s.strip.empty?</code>
+        </li>
+      
+        <li class="covered" data-hits="7" data-linenumber="37">
+          <span class="hits">7</span>
+          
+          <code class="ruby">      &#39;não informado&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="38">
+          
+          
+          <code class="ruby">    else</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="39">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      &quot;#{@cidade}, #{@estado}, #{@pais}&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="40">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="41">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="42">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="43">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def cep</code>
+        </li>
+      
+        <li class="covered" data-hits="4" data-linenumber="44">
+          <span class="hits">4</span>
+          
+          <code class="ruby">    if @cep.to_s.strip.empty?</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="45">
+          <span class="hits">3</span>
+          
+          <code class="ruby">      &#39;não informado&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="46">
+          
+          
+          <code class="ruby">    else</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="47">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      format_cep</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="48">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="49">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="50">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="51">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def end_completo</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="52">
+          
+          
+          <code class="ruby">    end_comp = {</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="53">
+          
+          
+          <code class="ruby">      logradouro:       logradouro,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="54">
+          
+          
+          <code class="ruby">      bairro:           bairro,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="55">
+          
+          
+          <code class="ruby">      localidade:       localidade,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="56">
+          
+          
+          <code class="ruby">      cep:              cep</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="57">
+          
+          
+          <code class="ruby">    }</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="58">
+          
+          
+          <code class="ruby">    end_comp</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="59">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="60">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="61">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def tipo_endereco</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="62">
+          
+          
+          <code class="ruby">    endereco = {</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="63">
+          
+          
+          <code class="ruby">      1 =&gt; &#39;residencial&#39;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="64">
+          
+          
+          <code class="ruby">      2 =&gt; &#39;comercial&#39;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="65">
+          
+          
+          <code class="ruby">      3 =&gt; &#39;correspondencia&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="66">
+          
+          
+          <code class="ruby">    }</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="67">
+          
+          
+          <code class="ruby">    endereco[@tipo_end]</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="68">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="69">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="70">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  private</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="71">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="72">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def format_cep</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="73">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    &quot;#{@cep.to_s.slice(0..1)}.#{@cep.to_s.slice(2..4)}-#{@cep.to_s.slice(5..7)}&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="74">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="75">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+      
+        <div class="source_table" id="facfec305e3e39cfd3693136482849eca74259f9">
+  <div class="header">
+    <h3>spec/endereco_spec.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>99</b> relevant lines. 
+      <span class="green"><b>99</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">require_relative &#39;spec_helper&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="2">
+          
+          
+          <code class="ruby"># Endereco</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
+          
+          <code class="ruby">describe Endereco do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="4">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  describe &#39;#logradouro&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="5">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    context &#39;quando o rua for nulo ou vazio&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="6">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      it &#39;retorne não informado quando rua for nulo&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="7">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        endereco = Endereco.new(tipo_end: 1, rua: nil, num: nil, compl: nil,\</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="8">
+          
+          
+          <code class="ruby">                                bairro: &#39;Campo Pequeno&#39;, cidade: &#39;Colombo&#39;,\</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="9">
+          
+          
+          <code class="ruby">                                estado: &#39;Paraná&#39;, pais: &#39;Brasil&#39;,\</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="10">
+          
+          
+          <code class="ruby">                                cep: 834_065_80)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="11">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="12">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        expect(endereco.logradouro).to eql(&#39;não informado&#39;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="13">
+          
+          
+          <code class="ruby">      end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="14">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="15">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      it &#39;retorne  não informado quando rua for vazio&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="16">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        endereco = Endereco.new(tipo_end: 1, rua: &#39;&#39;, num: 139, compl: &#39;&#39;,\</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="17">
+          
+          
+          <code class="ruby">                                bairro: &#39;Campo Pequeno&#39;, cidade: &#39;Colombo&#39;,\</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="18">
+          
+          
+          <code class="ruby">                                estado: &#39;Paraná&#39;, pais: &#39;Brasil&#39;,\</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="19">
+          
+          
+          <code class="ruby">                                cep: 834_065_80)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="20">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="21">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        expect(endereco.logradouro).to eql(&#39;não informado&#39;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="22">
+          
+          
+          <code class="ruby">      end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="23">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="24">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      it &#39;retorne  não informado quando rua for 2 espaços vazios &#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="25">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        endereco = Endereco.new(tipo_end: 1, rua: &#39;  &#39;, num: &#39;  &#39;, compl: \</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="26">
+          
+          
+          <code class="ruby">                                &#39;apto: 41&#39;, bairro: &#39;Campo Pequeno&#39;, cidade: \</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="27">
+          
+          
+          <code class="ruby">                                &#39;Colombo&#39;, estado: &#39;Paraná&#39;, pais: &#39;Brasil&#39;, \</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="28">
+          
+          
+          <code class="ruby">                                cep: 834_065_80)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="29">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="30">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        expect(endereco.logradouro).to eql(&#39;não informado&#39;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="31">
+          
+          
+          <code class="ruby">      end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="32">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="33">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      context &#39;quando o numero não for nulo&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="34">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        it &#39;retorne não informado&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="35">
+          <span class="hits">1</span>
+          
+          <code class="ruby">          endereco = Endereco.new(tipo_end: 1, rua: nil, num: 139, compl: nil, \</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="36">
+          
+          
+          <code class="ruby">                                  bairro: &#39;Campo Pequeno&#39;, cidade: &#39;Colombo&#39;, \</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="37">
+          
+          
+          <code class="ruby">                                  estado: &#39;Paraná&#39;, pais: &#39;Brasil&#39;, \</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="38">
+          
+          
+          <code class="ruby">                                  cep: 834_065_80)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="39">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="40">
+          <span class="hits">1</span>
+          
+          <code class="ruby">          expect(endereco.logradouro).to eql(&#39;não informado&#39;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="41">
+          
+          
+          <code class="ruby">        end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="42">
+          
+          
+          <code class="ruby">      end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="43">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="44">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      context &#39;quando o complemento não for nulo&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="45">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        it &#39;retorne não informado&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="46">
+          <span class="hits">1</span>
+          
+          <code class="ruby">          endereco = Endereco.new(tipo_end: 1, rua: &#39;  &#39;, num: nil, compl: \</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="47">
+          
+          
+          <code class="ruby">                                  &#39;Apto 41&#39;, bairro: &#39;Campo Pequeno&#39;, cidade: \</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="48">
+          
+          
+          <code class="ruby">                                  &#39;Colombo&#39;, estado: &#39;Paraná&#39;, pais: &#39;Brasil&#39;, \</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="49">
+          
+          
+          <code class="ruby">                                  cep: 834_065_80)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="50">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="51">
+          <span class="hits">1</span>
+          
+          <code class="ruby">          expect(endereco.logradouro).to eql(&#39;não informado&#39;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="52">
+          
+          
+          <code class="ruby">        end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="53">
+          
+          
+          <code class="ruby">      end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="54">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="55">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="56">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    context &#39;quando o numero for nulo ou vazio&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="57">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      context &#39;quando o complemento for vazio ou nulo&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="58">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        it &#39;retorne apenas o nome da rua quando numero for vazio&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="59">
+          <span class="hits">1</span>
+          
+          <code class="ruby">          endereco = Endereco.new(tipo_end: 1, rua: &#39;Guilherme Rodbard&#39;, num: \</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="60">
+          
+          
+          <code class="ruby">                                  &#39;&#39;, compl: &#39;&#39;, bairro: \</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="61">
+          
+          
+          <code class="ruby">                                  &#39;Campo Pequeno&#39;, cidade: &#39;Colombo&#39;, estado: \</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="62">
+          
+          
+          <code class="ruby">                                  &#39;Paraná&#39;, pais: &#39;Brasil&#39;, cep: 834_065_80)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="63">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="64">
+          <span class="hits">1</span>
+          
+          <code class="ruby">          expect(endereco.logradouro).to eql(&#39;Guilherme Rodbard&#39;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="65">
+          
+          
+          <code class="ruby">        end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="66">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="67">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        it &#39;retorne apenas o nome da rua quando numero for nulo&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="68">
+          <span class="hits">1</span>
+          
+          <code class="ruby">          endereco = Endereco.new(tipo_end: 1, rua: &#39;Guilherme Rodbard&#39;, num: \</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="69">
+          
+          
+          <code class="ruby">                                  nil, compl:  &#39;&#39;, bairro: \</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="70">
+          
+          
+          <code class="ruby">                                  &#39;Campo Pequeno&#39;, cidade: &#39;Colombo&#39;, estado: \</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="71">
+          
+          
+          <code class="ruby">                                  &#39;Paraná&#39;, pais: &#39;Brasil&#39;, cep: 834_065_80)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="72">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="73">
+          <span class="hits">1</span>
+          
+          <code class="ruby">          expect(endereco.logradouro).to eql(&#39;Guilherme Rodbard&#39;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="74">
+          
+          
+          <code class="ruby">        end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="75">
+          
+          
+          <code class="ruby">      end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="76">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="77">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="78">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    context &#39;quando o complemento for nulo ou vazio&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="79">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      it &#39;retorne o nome da rua e numero quando complemento for vazio&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="80">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        endereco = Endereco.new(tipo_end: 1, rua: &#39;Guilherme Rodbard&#39;, num: \</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="81">
+          
+          
+          <code class="ruby">                                139, compl: &#39;  &#39;, bairro: \</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="82">
+          
+          
+          <code class="ruby">                                &#39;Campo Pequeno&#39;, cidade: &#39;Colombo&#39;, estado: \</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="83">
+          
+          
+          <code class="ruby">                                &#39;Paraná&#39;, pais: &#39;Brasil&#39;, cep: 834_065_80)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="84">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="85">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        expect(endereco.logradouro).to eql(&#39;Guilherme Rodbard, 139&#39;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="86">
+          
+          
+          <code class="ruby">      end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="87">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="88">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      it &#39;retorne o nome da rua e numero quando complemento for nulo&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="89">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        endereco = Endereco.new(tipo_end: 1, rua: &#39;Guilherme Rodbard&#39;, num: \</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="90">
+          
+          
+          <code class="ruby">                                139, compl: nil, bairro: \</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="91">
+          
+          
+          <code class="ruby">                                &#39;Campo Pequeno&#39;, cidade: &#39;Colombo&#39;, estado: \</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="92">
+          
+          
+          <code class="ruby">                                &#39;Paraná&#39;, pais: &#39;Brasil&#39;, cep: 834_065_80)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="93">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="94">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        expect(endereco.logradouro).to eql(&#39;Guilherme Rodbard, 139&#39;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="95">
+          
+          
+          <code class="ruby">      end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="96">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="97">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="98">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    context &#39;quando todos os dados forem informados&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="99">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      it &#39;retorne o endereço completo&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="100">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        endereco = Endereco.new(tipo_end: 1, rua: &#39;Guilherme Rodbard&#39;, num: \</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="101">
+          
+          
+          <code class="ruby">                                139, compl: &#39;apto: 41&#39;, bairro: \</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="102">
+          
+          
+          <code class="ruby">                                &#39;Campo Pequeno&#39;, cidade: &#39;Colombo&#39;, estado: \</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="103">
+          
+          
+          <code class="ruby">                                &#39;Paraná&#39;, pais: &#39;Brasil&#39;, cep: 834_065_80)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="104">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="105">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        expect(endereco.logradouro).to eql(&#39;Guilherme Rodbard, 139 - apto: 41&#39;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="106">
+          
+          
+          <code class="ruby">      end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="107">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="108">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="109">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="110">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  describe &#39;#bairro&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="111">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    context &#39;quando o bairro for nulo ou vazio&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="112">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      it &#39;retorne não informado quando rua for nulo&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="113">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        endereco = Endereco.new(tipo_end: 1, rua: nil, num: nil, compl: nil,\</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="114">
+          
+          
+          <code class="ruby">                                bairro: nil, cidade: &#39;Colombo&#39;,\</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="115">
+          
+          
+          <code class="ruby">                                estado: &#39;Paraná&#39;, pais: &#39;Brasil&#39;,\</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="116">
+          
+          
+          <code class="ruby">                                cep: 834_065_80)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="117">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="118">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        expect(endereco.bairro).to eql(&#39;não informado&#39;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="119">
+          
+          
+          <code class="ruby">      end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="120">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="121">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      it &#39;retorne  não informado quando bairro for vazio&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="122">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        endereco = Endereco.new(tipo_end: 1, rua: &#39;&#39;, num: 139, compl: &#39;&#39;,\</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="123">
+          
+          
+          <code class="ruby">                                bairro: &#39;&#39;, cidade: &#39;Colombo&#39;,\</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="124">
+          
+          
+          <code class="ruby">                                estado: &#39;Paraná&#39;, pais: &#39;Brasil&#39;,\</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="125">
+          
+          
+          <code class="ruby">                                cep: 834_065_80)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="126">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="127">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        expect(endereco.bairro).to eql(&#39;não informado&#39;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="128">
+          
+          
+          <code class="ruby">      end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="129">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="130">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      it &#39;retorne  não informado quando bairro for 2 espaços vazios &#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="131">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        endereco = Endereco.new(tipo_end: 1, rua: &#39;  &#39;, num: &#39;  &#39;, compl: \</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="132">
+          
+          
+          <code class="ruby">                                &#39;apto: 41&#39;, bairro: &#39;  &#39;, cidade: \</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="133">
+          
+          
+          <code class="ruby">                                &#39;Colombo&#39;, estado: &#39;Paraná&#39;, pais: &#39;Brasil&#39;, \</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="134">
+          
+          
+          <code class="ruby">                                cep: 834_065_80)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="135">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="136">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        expect(endereco.bairro).to eql(&#39;não informado&#39;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="137">
+          
+          
+          <code class="ruby">      end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="138">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="139">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="140">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    context &#39;quando o bairro estiver preenchido&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="141">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      it &#39;retorne nome do bairro&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="142">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        endereco = Endereco.new(tipo_end: 1, rua: nil, num: 139, compl: nil, \</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="143">
+          
+          
+          <code class="ruby">                                bairro: &#39;Campo Pequeno&#39;, cidade: &#39;Colombo&#39;, \</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="144">
+          
+          
+          <code class="ruby">                                estado: &#39;Paraná&#39;, pais: &#39;Brasil&#39;, \</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="145">
+          
+          
+          <code class="ruby">                                cep: 834_065_80)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="146">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="147">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        expect(endereco.bairro).to eql(&#39;Campo Pequeno&#39;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="148">
+          
+          
+          <code class="ruby">      end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="149">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="150">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="151">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="152">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  describe &#39;#localidade&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="153">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    context &#39;quando o cidade for nulo ou vazio&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="154">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      it &#39;retorne não informado quando cidade for nulo&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="155">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        endereco = Endereco.new(tipo_end: 1, rua: &#39;Guilherme Rodbard&#39;, \</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="156">
+          
+          
+          <code class="ruby">                                num: 139, compl: &#39;apto: 41&#39;, bairro: \</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="157">
+          
+          
+          <code class="ruby">                                &#39;Campo Pequeno&#39;, cidade: nil, estado: \</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="158">
+          
+          
+          <code class="ruby">                                &#39;Paraná&#39;, pais: &#39;Brasil&#39;, cep: 834_065_80)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="159">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="160">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        expect(endereco.localidade).to eql(&#39;não informado&#39;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="161">
+          
+          
+          <code class="ruby">      end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="162">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="163">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      it &#39;retorne  não informado quando cidade for vazio&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="164">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        endereco = Endereco.new(tipo_end: 1, rua: &#39;Guilherme Rodbard&#39;, \</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="165">
+          
+          
+          <code class="ruby">                                num: 139, compl: &#39;apto: 41&#39;, bairro: \</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="166">
+          
+          
+          <code class="ruby">                                &#39;Campo Pequeno&#39;, cidade: &#39;&#39;, estado: \</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="167">
+          
+          
+          <code class="ruby">                                &#39;Paraná&#39;, pais: &#39;Brasil&#39;, cep: 834_065_80)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="168">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="169">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        expect(endereco.localidade).to eql(&#39;não informado&#39;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="170">
+          
+          
+          <code class="ruby">      end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="171">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="172">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      it &#39;retorne  não informado quando cidade for 2 espaços vazios &#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="173">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        endereco = Endereco.new(tipo_end: 1, rua: &#39;Guilherme Rodbard&#39;, \</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="174">
+          
+          
+          <code class="ruby">                                num: 139, compl: &#39;apto: 41&#39;, bairro: \</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="175">
+          
+          
+          <code class="ruby">                                &#39;Campo Pequeno&#39;, cidade: &#39;  &#39;, estado: \</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="176">
+          
+          
+          <code class="ruby">                                &#39;Paraná&#39;, pais: &#39;Brasil&#39;, cep: 834_065_80)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="177">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="178">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        expect(endereco.localidade).to eql(&#39;não informado&#39;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="179">
+          
+          
+          <code class="ruby">      end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="180">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="181">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="182">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    context &#39;quando o estado for nulo ou vazio&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="183">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      it &#39;retorne não informado quando estado for vazio&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="184">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        endereco = Endereco.new(tipo_end: 1, rua: &#39;Guilherme Rodbard&#39;, num: \</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="185">
+          
+          
+          <code class="ruby">                                &#39;&#39;, compl: &#39;&#39;, bairro: &#39;Campo Pequeno&#39;, \</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="186">
+          
+          
+          <code class="ruby">                                cidade: &#39;Colombo&#39;, estado: &#39;&#39;, \</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="187">
+          
+          
+          <code class="ruby">                                pais: &#39;Brasil&#39;, cep: 834_065_80)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="188">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="189">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        expect(endereco.localidade).to eql(&#39;não informado&#39;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="190">
+          
+          
+          <code class="ruby">      end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="191">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="192">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      it &#39;retorne não informado quando estado for nulo&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="193">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        endereco = Endereco.new(tipo_end: 1, rua: &#39;Guilherme Rodbard&#39;, num: \</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="194">
+          
+          
+          <code class="ruby">                                nil, compl:  &#39;&#39;, bairro: \</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="195">
+          
+          
+          <code class="ruby">                                &#39;Campo Pequeno&#39;, cidade: &#39;Colombo&#39;, estado: \</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="196">
+          
+          
+          <code class="ruby">                                nil, pais: &#39;Brasil&#39;, cep: 834_065_80)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="197">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="198">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        expect(endereco.localidade).to eql(&#39;não informado&#39;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="199">
+          
+          
+          <code class="ruby">      end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="200">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="201">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="202">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    context &#39;quando o pais for nulo ou vazio&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="203">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      it &#39;retorne não informado quando pais for vazio&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="204">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        endereco = Endereco.new(tipo_end: 1, rua: &#39;Guilherme Rodbard&#39;, num: \</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="205">
+          
+          
+          <code class="ruby">                                139, compl: &#39;  &#39;, bairro: \</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="206">
+          
+          
+          <code class="ruby">                                &#39;Campo Pequeno&#39;, cidade: &#39;Colombo&#39;, estado: \</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="207">
+          
+          
+          <code class="ruby">                                &#39;Paraná&#39;, pais: &#39;&#39;, cep: 834_065_80)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="208">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="209">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        expect(endereco.localidade).to eql(&#39;não informado&#39;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="210">
+          
+          
+          <code class="ruby">      end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="211">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="212">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      it &#39;retorne não informado quando o pais for nulo&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="213">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        endereco = Endereco.new(tipo_end: 1, rua: &#39;Guilherme Rodbard&#39;, num: \</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="214">
+          
+          
+          <code class="ruby">                                139, compl: nil, bairro: \</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="215">
+          
+          
+          <code class="ruby">                                &#39;Campo Pequeno&#39;, cidade: &#39;Colombo&#39;, estado: \</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="216">
+          
+          
+          <code class="ruby">                                &#39;Paraná&#39;, pais: nil, cep: 834_065_80)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="217">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="218">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        expect(endereco.localidade).to eql(&#39;não informado&#39;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="219">
+          
+          
+          <code class="ruby">      end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="220">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="221">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="222">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    context &#39;quando todos os dados forem informados&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="223">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      it &#39;retorne o localidade completa&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="224">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        endereco = Endereco.new(tipo_end: 1, rua: &#39;Guilherme Rodbard&#39;, num: \</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="225">
+          
+          
+          <code class="ruby">                                139, compl: &#39;apto: 41&#39;, bairro: \</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="226">
+          
+          
+          <code class="ruby">                                &#39;Campo Pequeno&#39;, cidade: &#39;Colombo&#39;, estado: \</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="227">
+          
+          
+          <code class="ruby">                                &#39;Paraná&#39;, pais: &#39;Brasil&#39;, cep: 834_065_80)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="228">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="229">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        expect(endereco.localidade).to eql(&#39;Colombo, Paraná, Brasil&#39;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="230">
+          
+          
+          <code class="ruby">      end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="231">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="232">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="233">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="234">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  describe &#39;#cep&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="235">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    context &#39;se o cep estiver nulo ou vazio ou tiver 2 espaços&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="236">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      it &#39;retorne CEP não informado se for nulo&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="237">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        endereco = Endereco.new(tipo_end: 1, rua: &#39;Guilherme Rodbard&#39;, \</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="238">
+          
+          
+          <code class="ruby">                                num: 139, compl: &#39;apto: 41&#39;, bairro: \</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="239">
+          
+          
+          <code class="ruby">                                &#39;Campo Pequeno&#39;, cidade: &#39;Colombo&#39;, estado: \</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="240">
+          
+          
+          <code class="ruby">                                &#39;Paraná&#39;, pais: &#39;Brasil&#39;, cep: nil)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="241">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="242">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        expect(endereco.cep).to eql(&#39;não informado&#39;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="243">
+          
+          
+          <code class="ruby">      end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="244">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="245">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      it &#39;retorne CEP não informado se for vazio&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="246">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        endereco = Endereco.new(tipo_end: 1, rua: &#39;Guilherme Rodbard&#39;, \</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="247">
+          
+          
+          <code class="ruby">                                num: 139, compl: &#39;apto: 41&#39;, bairro: \</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="248">
+          
+          
+          <code class="ruby">                                &#39;Campo Pequeno&#39;, cidade: &#39;Colombo&#39;, estado: \</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="249">
+          
+          
+          <code class="ruby">                                &#39;Paraná&#39;, pais: &#39;Brasil&#39;, cep: &#39;&#39;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="250">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="251">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        expect(endereco.cep).to eql(&#39;não informado&#39;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="252">
+          
+          
+          <code class="ruby">      end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="253">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="254">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      it &#39;retorne CEP não informado se for 2 espaços vazios&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="255">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        endereco = Endereco.new(tipo_end: 1, rua: &#39;Guilherme Rodbard&#39;, \</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="256">
+          
+          
+          <code class="ruby">                                num: 139, compl: &#39;apto: 41&#39;, bairro: \</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="257">
+          
+          
+          <code class="ruby">                                &#39;Campo Pequeno&#39;, cidade: &#39;Colombo&#39;, estado: \</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="258">
+          
+          
+          <code class="ruby">                                &#39;Paraná&#39;, pais: &#39;Brasil&#39;, cep: &#39; &#39;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="259">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="260">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        expect(endereco.cep).to eql(&#39;não informado&#39;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="261">
+          
+          
+          <code class="ruby">      end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="262">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="263">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="264">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    context &#39;se o cep estiver preenchido&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="265">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      it &#39;retorne numero do CEP&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="266">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        endereco = Endereco.new(tipo_end: 1, rua: &#39;Guilherme Rodbard&#39;, \</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="267">
+          
+          
+          <code class="ruby">                                num: 139, compl: &#39;apto: 41&#39;, bairro: \</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="268">
+          
+          
+          <code class="ruby">                                &#39;Campo Pequeno&#39;, cidade: &#39;Colombo&#39;, estado: \</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="269">
+          
+          
+          <code class="ruby">                                &#39;Paraná&#39;, pais: &#39;Brasil&#39;, cep: 834_065_80)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="270">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="271">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        expect(endereco.cep).to eql(&#39;83.406-580&#39;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="272">
+          
+          
+          <code class="ruby">      end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="273">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="274">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="275">
           
           
           <code class="ruby">end</code>
