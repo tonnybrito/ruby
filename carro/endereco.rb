@@ -17,35 +17,32 @@ class Endereco
 
   def logradouro
     return 'não informado' if @rua.to_s.strip.empty?
+
     lograd = '' << @rua
     lograd << ", #{@num}" unless @num.to_s.strip.empty?
     lograd << " - #{@compl}" unless @compl.to_s.strip.empty?
+
     lograd
   end
 
   def bairro
-    if @bairro.to_s.strip.empty?
-      'não informado'
-    else
-      "#{@bairro}"
-    end
+    return 'não informado' if @bairro.to_s.strip.empty?
+
+    @bairro
   end
 
   def localidade
-    if  @cidade.to_s.strip.empty? || @estado.to_s.strip.empty? \
-        || @pais.to_s.strip.empty?
-      'não informado'
-    else
-      "#{@cidade}, #{@estado}, #{@pais}"
-    end
+    return 'não informado' if @cidade.to_s.strip.empty? || \
+                              @estado.to_s.strip.empty? || \
+                              @pais.to_s.strip.empty?
+
+    "#{@cidade}, #{@estado}, #{@pais}"
   end
 
   def cep
-    if @cep.to_s.strip.empty?
-      'não informado'
-    else
-      format_cep
-    end
+    return 'não informado' if @cep.to_s.strip.empty?
+
+    "#{@cep.to_s.slice(0..1)}.#{@cep.to_s.slice(2..4)}-#{@cep.to_s.slice(5..7)}"
   end
 
   def end_completo
@@ -65,11 +62,5 @@ class Endereco
       3 => 'correspondencia'
     }
     endereco[@tipo_end]
-  end
-
-  private
-
-  def format_cep
-    "#{@cep.to_s.slice(0..1)}.#{@cep.to_s.slice(2..4)}-#{@cep.to_s.slice(5..7)}"
   end
 end
