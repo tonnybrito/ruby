@@ -47,31 +47,30 @@ class Endereco
 
   def end_completo
     end_comp = {
-      logradouro:       end_compl(logradouro),
-      bairro:           end_compl(bairro),
-      localidade:       end_compl(localidade),
-      cep:              end_compl(cep)
+      logradouro:       end_complet(logradouro),
+      bairro:           end_complet(bairro),
+      localidade:       end_complet(localidade),
+      cep:              end_complet(cep)
     }
 
     end_comp
   end
 
   def tipo_endereco
+    return 'não informado' if @tipo_end.to_s.strip.empty?
+
     endereco = {
-      1 => tipo_end('residencial'),
-      2 => tipo_end('comercial'),
-      3 => tipo_end('correspondencia')
+      1 => 'residencial',
+      2 => 'comercial',
+      3 => 'correspondencia'
     }
+
     endereco[@tipo_end]
   end
 
   private
 
-  def end_compl(valor)
+  def end_complet(valor)
     valor.to_s.strip.empty? ? 'não informado' : valor
-  end
-
-  def tipo_end(valor)
-    valor.to_s.strip.empty? ? 'errado ou não informado' : valor
   end
 end
