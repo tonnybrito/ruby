@@ -32,11 +32,14 @@ class Telefone
   end
 
   def tipo_fone
+    return 'não informado' if @tipo.to_s.strip.empty?
+
     {
       1 => codigo_fone('residencial'),
       2 => codigo_fone('comercial'),
       3 => codigo_fone('celular')
     }
+    codigo_fone(@tipo)
   end
 
   private

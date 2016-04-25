@@ -120,6 +120,86 @@ describe Telefone do
       end
     end
   end
+
+  describe '#tipo_fone' do
+    context 'retorne tipo de telefone Residencial, Comercial, Correspondencia' do
+      context 'fone residencial' do
+        it 'retorne não informado para telefone residencial nulo' do
+          telefone = Telefone.new(413_055_733_4, nil)
+
+          expect(telefone.tipo_fone).to eql('não informado')
+        end
+
+        it 'retorne não informado para telefone residencial vazio' do
+          telefone = Telefone.new(413_055_733_4, '')
+
+          expect(telefone.tipo_fone).to eql('não informado')
+        end
+
+        it 'retorne não informado para telefone residencial com dois espaços vazios' do
+          telefone = Telefone.new(413_055_733_4, '  ')
+
+          expect(telefone.tipo_fone).to eql('não informado')
+        end
+
+        it 'retorne residencial para tipo de telefone residencial informado' do
+          telefone = Telefone.new(413_055_733_4, 1)
+
+          expect(telefone.tipo_fone).to eql(1)
+        end
+      end
+
+      context 'fone comercial' do
+        it 'retorne não informado para telefone comercial nulo' do
+          telefone = Telefone.new(413_044_209_9, nil)
+
+          expect(telefone.tipo_fone).to eql('não informado')
+        end
+
+        it 'retorne não informado para telefone comercial vazio' do
+          telefone = Telefone.new(413_044_209_9, '')
+
+          expect(telefone.tipo_fone).to eql('não informado')
+        end
+
+        it 'retorne não informado para telefone comercial com dois espaços vazios' do
+          telefone = Telefone.new(413_044_209_9, '  ')
+
+          expect(telefone.tipo_fone).to eql('não informado')
+        end
+
+        it 'retorne comercial para tipo de telefone comercial informado' do
+          telefone = Telefone.new(413_044_209_9, 2)
+
+          expect(telefone.tipo_fone).to eql(2)
+        end
+      end
+
+      context 'fone celular' do
+        it 'retorne não informado para telefone celular nulo' do
+          telefone = Telefone.new(419_875_587_6, nil)
+
+          expect(telefone.tipo_fone).to eql('não informado')
+        end
+
+        it 'retorne não informado para telefone celular vazio' do
+          telefone = Telefone.new(419_875_587_6, '')
+
+          expect(telefone.tipo_fone).to eql('não informado')
+        end
+
+        it 'retorne não informado para telefone celular com dois espaços vazios' do
+          telefone = Telefone.new(419_875_587_6, '  ')
+
+          expect(telefone.tipo_fone).to eql('não informado')
+        end
+
+        it 'retorne celular para tipo de telefone celular informado' do
+          telefone = Telefone.new(419_875_587_6, 3)
+
+          expect(telefone.tipo_fone).to eql(3)
+        end
+      end
+    end
+  end
 end
-
-
