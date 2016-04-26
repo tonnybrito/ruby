@@ -233,7 +233,7 @@ describe Endereco do
 
   describe '#cep' do
     context 'se o cep estiver nulo ou vazio ou tiver 2 espaços' do
-      it 'retorne CEP não informado se for nulo' do
+      it 'retorne não informado se for nulo' do
         endereco = Endereco.new(tipo_end: 1, rua: 'Guilherme Rodbard', \
                                 num: 139, compl: 'apto: 41', bairro: \
                                 'Campo Pequeno', cidade: 'Colombo', estado: \
@@ -242,7 +242,7 @@ describe Endereco do
         expect(endereco.cep).to eql('não informado')
       end
 
-      it 'retorne CEP não informado se for vazio' do
+      it 'retorne não informado se for vazio' do
         endereco = Endereco.new(tipo_end: 1, rua: 'Guilherme Rodbard', \
                                 num: 139, compl: 'apto: 41', bairro: \
                                 'Campo Pequeno', cidade: 'Colombo', estado: \
@@ -251,7 +251,7 @@ describe Endereco do
         expect(endereco.cep).to eql('não informado')
       end
 
-      it 'retorne CEP não informado se for 2 espaços vazios' do
+      it 'retorne não informado se for 2 espaços vazios' do
         endereco = Endereco.new(tipo_end: 1, rua: 'Guilherme Rodbard', \
                                 num: 139, compl: 'apto: 41', bairro: \
                                 'Campo Pequeno', cidade: 'Colombo', estado: \
@@ -359,8 +359,8 @@ describe Endereco do
   end
 
   describe '#tipo_endereco' do
-    context 'quando for invalido' do
-      it 'retorne codigo invalido quando tipo_end for nulo' do
+    context 'se tipo de endereco for nulo, vazio, ou tiver 2 espaços vazios' do
+      it 'retorne não informado se tipo de endereço for nulo' do
         endereco = Endereco.new(tipo_end: nil, rua: 'Guilherme Rodbard', \
                                 num: 139, compl: 'apto: 41', bairro: \
                                 'Campo Pequeno', cidade: 'Colombo', \
@@ -370,7 +370,7 @@ describe Endereco do
         expect(endereco.tipo_endereco).to eql('não informado')
       end
 
-      it 'retorne codigo invalido quando tipo_end for vazio' do
+      it 'retorne não informado se tipo de endereço for vazio' do
         endereco = Endereco.new(tipo_end: '', rua: 'Guilherme Rodbard', \
                                 num: 139, compl: 'apto: 41', bairro: \
                                 'Campo Pequeno', cidade: 'Colombo', \
@@ -380,7 +380,7 @@ describe Endereco do
         expect(endereco.tipo_endereco).to eql('não informado')
       end
 
-      it 'retorne codigo invalido quando tipo_end tiver 2 espaços vazios' do
+      it 'retorne não informado se tipo de endereço tiver 2 espaços vazios' do
         endereco = Endereco.new(tipo_end: '  ', rua: 'Guilherme Rodbard', \
                                 num: 139, compl: 'apto: 41', bairro: \
                                 'Campo Pequeno', cidade: 'Colombo', \
@@ -392,7 +392,7 @@ describe Endereco do
     end
 
     context 'residencial' do
-      it 'retorne residencial quando tipo_end for 1' do
+      it 'retorne residencial se tipo de endereço for 1' do
         endereco = Endereco.new(tipo_end: 1, rua: 'Guilherme Rodbard', \
                                 num: 139, compl: 'apto: 41', bairro:  \
                                 'Campo Pequeno', cidade: 'Colombo', \
@@ -404,7 +404,7 @@ describe Endereco do
     end
 
     context 'comercial' do
-      it 'retorne comercial quando tipo_end for 2' do
+      it 'retorne comercial se tipo de endereço for 2' do
         endereco = Endereco.new(tipo_end: 2, rua: 'Guilherme Rodbard', \
                                 num: 139, compl: 'apto: 41', bairro: \
                                 'Campo Pequeno', cidade: 'Colombo', \
@@ -416,7 +416,7 @@ describe Endereco do
     end
 
     context 'correspondencia' do
-      it 'retorne correspondencia quando tipo_end for 3' do
+      it 'retorne correspondencia se tipo de endereço for 3' do
         endereco = Endereco.new(tipo_end: 3, rua: 'Guilherme Rodbard', \
                                 num: 139, compl: 'apto: 41', bairro: \
                                 'Campo Pequeno', cidade: 'Colombo', \

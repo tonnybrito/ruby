@@ -14,7 +14,7 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2016-04-26T16:37:30+00:00">2016-04-26T16:37:30+00:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2016-04-26T17:41:22+00:00">2016-04-26T17:41:22+00:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -83,7 +83,7 @@
       <tr>
         <td class="strong"><a href="#dc8cb31cd8b0028cf99f976a62b9f194e5d19854" class="src_link" title="pessoa_private.rb">pessoa_private.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>46</td>
+        <td>40</td>
         <td>18</td>
         <td>18</td>
         <td>0</td>
@@ -1513,25 +1513,25 @@
         <li class="never" data-hits="" data-linenumber="4">
           
           
-          <code class="ruby">=begin</code>
+          <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="5">
+        <li class="covered" data-hits="1" data-linenumber="5">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">  def fone_ident(ident)</code>
+          <code class="ruby">  def fone_array(array)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="6">
+        <li class="covered" data-hits="15" data-linenumber="6">
+          <span class="hits">15</span>
           
-          
-          <code class="ruby">    lista = fone_array(ident)</code>
+          <code class="ruby">    fones = phones.select { |f| f.tipo == array }</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="7">
+        <li class="covered" data-hits="3" data-linenumber="7">
+          <span class="hits">3</span>
           
-          
-          <code class="ruby">    lista.join(&#39;, &#39;)</code>
+          <code class="ruby">    fones.map(&amp;:num_phone)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="8">
@@ -1543,226 +1543,190 @@
         <li class="never" data-hits="" data-linenumber="9">
           
           
-          <code class="ruby">=end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="10">
-          
-          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="11">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  def fone_array(array)</code>
-        </li>
-      
-        <li class="covered" data-hits="15" data-linenumber="12">
-          <span class="hits">15</span>
-          
-          <code class="ruby">    fones = phones.select { |f| f.tipo == array }</code>
-        </li>
-      
-        <li class="covered" data-hits="3" data-linenumber="13">
-          <span class="hits">3</span>
-          
-          <code class="ruby">    fones.map(&amp;:num_phone)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="14">
-          
-          
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="15">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="16">
+        <li class="covered" data-hits="1" data-linenumber="10">
           <span class="hits">1</span>
           
           <code class="ruby">  def incluir_fone(fone, tipo)</code>
         </li>
       
-        <li class="covered" data-hits="8" data-linenumber="17">
+        <li class="covered" data-hits="8" data-linenumber="11">
           <span class="hits">8</span>
           
           <code class="ruby">    item = Telefone.new(fone, tipo)</code>
         </li>
       
-        <li class="covered" data-hits="8" data-linenumber="18">
+        <li class="covered" data-hits="8" data-linenumber="12">
           <span class="hits">8</span>
           
           <code class="ruby">    @phones.push(item)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="19">
+        <li class="never" data-hits="" data-linenumber="13">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="20">
+        <li class="never" data-hits="" data-linenumber="14">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="21">
+        <li class="covered" data-hits="1" data-linenumber="15">
           <span class="hits">1</span>
           
           <code class="ruby">  def enderecos_completos(tipo)</code>
         </li>
       
-        <li class="covered" data-hits="12" data-linenumber="22">
+        <li class="covered" data-hits="12" data-linenumber="16">
           <span class="hits">12</span>
           
           <code class="ruby">    lista = enderecos.select { |list| list.tipo_end == tipo }</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="23">
+        <li class="covered" data-hits="3" data-linenumber="17">
           <span class="hits">3</span>
           
           <code class="ruby">    lista.map(&amp;:end_completo)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="24">
+        <li class="never" data-hits="" data-linenumber="18">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="25">
+        <li class="never" data-hits="" data-linenumber="19">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="26">
+        <li class="covered" data-hits="1" data-linenumber="20">
           <span class="hits">1</span>
           
           <code class="ruby">  def incluir_endereco(end_tipo)</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="27">
+        <li class="covered" data-hits="3" data-linenumber="21">
           <span class="hits">3</span>
           
           <code class="ruby">    item = Endereco.new(end_tipo)</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="28">
+        <li class="covered" data-hits="3" data-linenumber="22">
           <span class="hits">3</span>
           
           <code class="ruby">    @enderecos.push(item)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="29">
+        <li class="never" data-hits="" data-linenumber="23">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="30">
+        <li class="never" data-hits="" data-linenumber="24">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="31">
+        <li class="covered" data-hits="1" data-linenumber="25">
           <span class="hits">1</span>
           
           <code class="ruby">  def list_end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="32">
+        <li class="never" data-hits="" data-linenumber="26">
           
           
           <code class="ruby">    {</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="33">
+        <li class="never" data-hits="" data-linenumber="27">
           
           
           <code class="ruby">      residencial:   end_res,</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="34">
+        <li class="never" data-hits="" data-linenumber="28">
           
           
           <code class="ruby">      comercial:     end_com,</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="35">
+        <li class="never" data-hits="" data-linenumber="29">
           
           
           <code class="ruby">      postal:        end_postal</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="36">
+        <li class="covered" data-hits="1" data-linenumber="30">
           <span class="hits">1</span>
           
           <code class="ruby">    }</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="37">
+        <li class="never" data-hits="" data-linenumber="31">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="38">
+        <li class="never" data-hits="" data-linenumber="32">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="39">
+        <li class="covered" data-hits="1" data-linenumber="33">
           <span class="hits">1</span>
           
           <code class="ruby">  def list_fones</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="40">
+        <li class="never" data-hits="" data-linenumber="34">
           
           
           <code class="ruby">    {</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="41">
+        <li class="never" data-hits="" data-linenumber="35">
           
           
           <code class="ruby">      residencial:   fone_res,</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="42">
+        <li class="never" data-hits="" data-linenumber="36">
           
           
           <code class="ruby">      comercial:     fone_com,</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="43">
+        <li class="never" data-hits="" data-linenumber="37">
           
           
           <code class="ruby">      celular:       fone_cel</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="44">
+        <li class="covered" data-hits="1" data-linenumber="38">
           <span class="hits">1</span>
           
           <code class="ruby">    }</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="45">
+        <li class="never" data-hits="" data-linenumber="39">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="46">
+        <li class="never" data-hits="" data-linenumber="40">
           
           
           <code class="ruby">end</code>
@@ -3199,7 +3163,7 @@
         <li class="covered" data-hits="1" data-linenumber="236">
           <span class="hits">1</span>
           
-          <code class="ruby">      it &#39;retorne CEP não informado se for nulo&#39; do</code>
+          <code class="ruby">      it &#39;retorne não informado se for nulo&#39; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="237">
@@ -3253,7 +3217,7 @@
         <li class="covered" data-hits="1" data-linenumber="245">
           <span class="hits">1</span>
           
-          <code class="ruby">      it &#39;retorne CEP não informado se for vazio&#39; do</code>
+          <code class="ruby">      it &#39;retorne não informado se for vazio&#39; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="246">
@@ -3307,7 +3271,7 @@
         <li class="covered" data-hits="1" data-linenumber="254">
           <span class="hits">1</span>
           
-          <code class="ruby">      it &#39;retorne CEP não informado se for 2 espaços vazios&#39; do</code>
+          <code class="ruby">      it &#39;retorne não informado se for 2 espaços vazios&#39; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="255">
@@ -3955,13 +3919,13 @@
         <li class="covered" data-hits="1" data-linenumber="362">
           <span class="hits">1</span>
           
-          <code class="ruby">    context &#39;quando for invalido&#39; do</code>
+          <code class="ruby">    context &#39;se tipo de endereco for nulo, vazio, ou tiver 2 espaços vazios&#39; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="363">
           <span class="hits">1</span>
           
-          <code class="ruby">      it &#39;retorne codigo invalido quando tipo_end for nulo&#39; do</code>
+          <code class="ruby">      it &#39;retorne não informado se tipo de endereço for nulo&#39; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="364">
@@ -4021,7 +3985,7 @@
         <li class="covered" data-hits="1" data-linenumber="373">
           <span class="hits">1</span>
           
-          <code class="ruby">      it &#39;retorne codigo invalido quando tipo_end for vazio&#39; do</code>
+          <code class="ruby">      it &#39;retorne não informado se tipo de endereço for vazio&#39; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="374">
@@ -4081,7 +4045,7 @@
         <li class="covered" data-hits="1" data-linenumber="383">
           <span class="hits">1</span>
           
-          <code class="ruby">      it &#39;retorne codigo invalido quando tipo_end tiver 2 espaços vazios&#39; do</code>
+          <code class="ruby">      it &#39;retorne não informado se tipo de endereço tiver 2 espaços vazios&#39; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="384">
@@ -4153,7 +4117,7 @@
         <li class="covered" data-hits="1" data-linenumber="395">
           <span class="hits">1</span>
           
-          <code class="ruby">      it &#39;retorne residencial quando tipo_end for 1&#39; do</code>
+          <code class="ruby">      it &#39;retorne residencial se tipo de endereço for 1&#39; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="396">
@@ -4225,7 +4189,7 @@
         <li class="covered" data-hits="1" data-linenumber="407">
           <span class="hits">1</span>
           
-          <code class="ruby">      it &#39;retorne comercial quando tipo_end for 2&#39; do</code>
+          <code class="ruby">      it &#39;retorne comercial se tipo de endereço for 2&#39; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="408">
@@ -4297,7 +4261,7 @@
         <li class="covered" data-hits="1" data-linenumber="419">
           <span class="hits">1</span>
           
-          <code class="ruby">      it &#39;retorne correspondencia quando tipo_end for 3&#39; do</code>
+          <code class="ruby">      it &#39;retorne correspondencia se tipo de endereço for 3&#39; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="420">

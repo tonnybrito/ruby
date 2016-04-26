@@ -38,10 +38,3 @@ module PessoaPrivate
     }
   end
 end
-
-__END__
-  def fone_ident(ident)
-    lista = fone_array(ident)
-    lista.join(', ')
-  end
-
