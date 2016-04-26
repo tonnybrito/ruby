@@ -21,20 +21,26 @@ class Pessoa
   end
 
   def nome_inteiro
+    return 'não informado' \
+    if @pri_nome.to_s.strip.empty? && ult_nome.to_s.strip.empty?
+
     "#{@pri_nome} #{@ult_nome}"
   end
 
   def tels
+    return 'não informado' if phones.to_s.strip.empty?
     lista = phones.map(&:num_phone)
     lista.join(', ')
   end
 
   def calcula_idade
+    return 'não informado' if @data_nasc.to_s.strip.empty?
     data = Time.new.to_date.year
     data - @data_nasc.year
   end
 
   def data_nascimento
+    return 'não informado' if @data_nasc.to_s.strip.empty?
     @data_nasc.strftime('%d/%m/%Y')
   end
 

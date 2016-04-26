@@ -2,11 +2,6 @@
 module PessoaPrivate
   private
 
-  def fone_ident(ident)
-    lista = fone_array(ident)
-    lista.join(', ')
-  end
-
   def fone_array(array)
     fones = phones.select { |f| f.tipo == array }
     fones.map(&:num_phone)
@@ -43,3 +38,10 @@ module PessoaPrivate
     }
   end
 end
+
+__END__
+  def fone_ident(ident)
+    lista = fone_array(ident)
+    lista.join(', ')
+  end
+

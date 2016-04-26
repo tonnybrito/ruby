@@ -283,8 +283,9 @@ describe Endereco do
           cep:              'não informado'
         }
 
-        endereco = Endereco.new(tipo_end: 1, rua: nil, num: nil, compl: nil, bairro: \
-                                nil, cidade: nil, estado: nil, pais: nil, cep: nil)
+        endereco = Endereco.new(tipo_end: 1, rua: nil, num: nil, compl: nil, \
+                                bairro: nil, cidade: nil, estado: nil, pais: \
+                                nil, cep: nil)
 
         expect(endereco.end_completo).to eql(expectativa)
         expect(endereco.rua).to eql(nil)
@@ -296,15 +297,16 @@ describe Endereco do
       end
 
       it 'retorne não informado se endereço completo for vazio' do
-         expectativa = {
+        expectativa = {
           logradouro:       'não informado',
           bairro:           'não informado',
           localidade:       'não informado',
           cep:              'não informado'
         }
 
-        endereco = Endereco.new(tipo_end: 1, rua: '', num: '', compl: '', bairro: \
-                                '', cidade: '', estado: '', pais: '', cep: '')
+        endereco = Endereco.new(tipo_end: 1, rua: '', num: '', compl: '',\
+                                bairro: '', cidade: '', estado: '',\
+                                pais: '', cep: '')
 
         expect(endereco.end_completo).to eql(expectativa)
         expect(endereco.rua).to eql('')
@@ -313,7 +315,6 @@ describe Endereco do
         expect(endereco.cidade).to eql('')
         expect(endereco.estado).to eql('')
         expect(endereco.pais).to eql('')
-
       end
 
       it 'retorne não informado se endereço completo tiver 2 espaços vazios' do
@@ -324,8 +325,9 @@ describe Endereco do
           cep:              'não informado'
         }
 
-        endereco = Endereco.new(tipo_end: 1, rua: '  ', num: '  ', compl: '  ', bairro: \
-                                '  ', cidade: '  ', estado: '  ', pais: '  ', cep: '  ')
+        endereco = Endereco.new(tipo_end: 1, rua: '  ', num: '  ', compl: \
+                                '  ', bairro: '  ', cidade: '  ', estado: \
+                                '  ', pais: '  ', cep: '  ')
 
         expect(endereco.end_completo).to eql(expectativa)
         expect(endereco.rua).to eql('  ')
@@ -334,7 +336,6 @@ describe Endereco do
         expect(endereco.cidade).to eql('  ')
         expect(endereco.estado).to eql('  ')
         expect(endereco.pais).to eql('  ')
-
       end
     end
 
@@ -347,9 +348,10 @@ describe Endereco do
           cep:              '83.406-580'
         }
 
-        endereco = Endereco.new(tipo_end: 1, rua: 'Guilherme Rodbard', num: 139, compl: 'apto: 41', \
-                                bairro: 'Campo Pequeno', cidade: 'Colombo', estado: 'Paraná', pais: 'Brasil', \
-                                cep: 834_065_80)
+        endereco = Endereco.new(tipo_end: 1, rua: 'Guilherme Rodbard', num: \
+                                139, compl: 'apto: 41', bairro: \
+                                'Campo Pequeno', cidade: 'Colombo', estado: \
+                                'Paraná', pais: 'Brasil', cep: 834_065_80)
 
         expect(endereco.end_completo).to eql(expectativa)
       end
@@ -359,24 +361,30 @@ describe Endereco do
   describe '#tipo_endereco' do
     context 'quando for invalido' do
       it 'retorne codigo invalido quando tipo_end for nulo' do
-        endereco = Endereco.new(tipo_end: nil, rua: 'Guilherme Rodbard', num: 139, compl: 'apto: 41', \
-                                bairro: 'Campo Pequeno', cidade: 'Colombo', estado: 'Paraná', pais: 'Brasil', \
+        endereco = Endereco.new(tipo_end: nil, rua: 'Guilherme Rodbard', \
+                                num: 139, compl: 'apto: 41', bairro: \
+                                'Campo Pequeno', cidade: 'Colombo', \
+                                estado: 'Paraná', pais: 'Brasil', \
                                 cep: 834_065_80)
 
         expect(endereco.tipo_endereco).to eql('não informado')
       end
 
       it 'retorne codigo invalido quando tipo_end for vazio' do
-        endereco = Endereco.new(tipo_end: '', rua: 'Guilherme Rodbard', num: 139, compl: 'apto: 41', \
-                                bairro: 'Campo Pequeno', cidade: 'Colombo', estado: 'Paraná', pais: 'Brasil', \
+        endereco = Endereco.new(tipo_end: '', rua: 'Guilherme Rodbard', \
+                                num: 139, compl: 'apto: 41', bairro: \
+                                'Campo Pequeno', cidade: 'Colombo', \
+                                estado: 'Paraná', pais: 'Brasil', \
                                 cep: 834_065_80)
 
         expect(endereco.tipo_endereco).to eql('não informado')
       end
 
       it 'retorne codigo invalido quando tipo_end tiver 2 espaços vazios' do
-        endereco = Endereco.new(tipo_end: '  ', rua: 'Guilherme Rodbard', num: 139, compl: 'apto: 41', \
-                                bairro: 'Campo Pequeno', cidade: 'Colombo', estado: 'Paraná', pais: 'Brasil', \
+        endereco = Endereco.new(tipo_end: '  ', rua: 'Guilherme Rodbard', \
+                                num: 139, compl: 'apto: 41', bairro: \
+                                'Campo Pequeno', cidade: 'Colombo', \
+                                estado: 'Paraná', pais: 'Brasil', \
                                 cep: 834_065_80)
 
         expect(endereco.tipo_endereco).to eql('não informado')
@@ -385,9 +393,10 @@ describe Endereco do
 
     context 'residencial' do
       it 'retorne residencial quando tipo_end for 1' do
-
-        endereco = Endereco.new(tipo_end: 1, rua: 'Guilherme Rodbard', num: 139, compl: 'apto: 41', \
-                                bairro: 'Campo Pequeno', cidade: 'Colombo', estado: 'Paraná', pais: 'Brasil', \
+        endereco = Endereco.new(tipo_end: 1, rua: 'Guilherme Rodbard', \
+                                num: 139, compl: 'apto: 41', bairro:  \
+                                'Campo Pequeno', cidade: 'Colombo', \
+                                estado: 'Paraná', pais: 'Brasil', \
                                 cep: 834_065_80)
 
         expect(endereco.tipo_endereco).to eql('residencial')
@@ -396,9 +405,10 @@ describe Endereco do
 
     context 'comercial' do
       it 'retorne comercial quando tipo_end for 2' do
-
-        endereco = Endereco.new(tipo_end: 2, rua: 'Guilherme Rodbard', num: 139, compl: 'apto: 41', \
-                                bairro: 'Campo Pequeno', cidade: 'Colombo', estado: 'Paraná', pais: 'Brasil', \
+        endereco = Endereco.new(tipo_end: 2, rua: 'Guilherme Rodbard', \
+                                num: 139, compl: 'apto: 41', bairro: \
+                                'Campo Pequeno', cidade: 'Colombo', \
+                                estado: 'Paraná', pais: 'Brasil', \
                                 cep: 834_065_80)
 
         expect(endereco.tipo_endereco).to eql('comercial')
@@ -407,9 +417,10 @@ describe Endereco do
 
     context 'correspondencia' do
       it 'retorne correspondencia quando tipo_end for 3' do
-
-        endereco = Endereco.new(tipo_end: 3, rua: 'Guilherme Rodbard', num: 139, compl: 'apto: 41', \
-                                bairro: 'Campo Pequeno', cidade: 'Colombo', estado: 'Paraná', pais: 'Brasil', \
+        endereco = Endereco.new(tipo_end: 3, rua: 'Guilherme Rodbard', \
+                                num: 139, compl: 'apto: 41', bairro: \
+                                'Campo Pequeno', cidade: 'Colombo', \
+                                estado: 'Paraná', pais: 'Brasil', \
                                 cep: 834_065_80)
 
         expect(endereco.tipo_endereco).to eql('correspondencia')

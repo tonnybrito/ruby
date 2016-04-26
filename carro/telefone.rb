@@ -34,17 +34,17 @@ class Telefone
   def tipo_fone
     return 'não informado' if @tipo.to_s.strip.empty?
 
-    {
+    codigo = {
       1 => codigo_fone('residencial'),
       2 => codigo_fone('comercial'),
       3 => codigo_fone('celular')
     }
-    codigo_fone(@tipo)
+    codigo[@tipo]
   end
 
   private
 
   def codigo_fone(valor)
-    valor.to_s.strip.empty? ? 'codigo errado, ou não informado' : valor
+    valor.to_s.strip.empty? ? 'não informado' : valor
   end
 end
