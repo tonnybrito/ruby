@@ -1,10 +1,11 @@
 require 'simplecov'
 require 'rspec'
 
-require 'loads'
-
 SimpleCov.start do
   add_filter '/spec/'
 
-  add_group 'Carro', 'ruby'
+  add_group 'Autos', 'autos'
+  add_group 'Pessoa', 'pessoa'
 end
+
+require 'loads'

@@ -3,9 +3,9 @@
 require 'net/http'
 require 'date'
 require 'time'
-require './telefone'
-require './endereco'
-require './pessoa_private'
+require './pessoa/telefone'
+require './pessoa/endereco'
+require './pessoa/pessoa_private'
 
 # Pessoa
 class Pessoa
