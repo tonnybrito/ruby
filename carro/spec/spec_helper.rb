@@ -1,8 +1,10 @@
 require 'simplecov'
-SimpleCov.start
+require 'rspec'
 
-require './carro'
-require './endereco'
-require './telefone'
-require './pessoa'
-require './pessoa_private'
+require 'loads'
+
+SimpleCov.start do
+  add_filter '/spec/'
+
+  add_group 'Carro', 'ruby'
+end
