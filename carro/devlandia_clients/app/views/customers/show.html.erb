@@ -1,0 +1,94 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Contact name:</strong>
+  <%= @customer.contact_name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @customer.email %>
+</p>
+
+<p>
+  <strong>Company:</strong>
+  <%= @customer.company %>
+</p>
+
+<p>
+  <strong>Sector:</strong>
+  <%= @customer.sector %>
+</p>
+
+<p>
+  <strong>Contact date:</strong>
+  <%= @customer.contact_date %>
+</p>
+
+<p>
+  <strong>Project:</strong>
+  <%= @customer.project %>
+</p>
+
+<p>
+  <strong>Project language:</strong>
+  <%= @customer.project_language %>
+</p>
+
+<p>
+  <strong>Project description:</strong>
+  <%= @customer.project_description %>
+</p>
+
+<p>
+  <strong>Calc hours:</strong>
+  <%= @customer.calc_hours %>
+</p>
+
+<p>
+  <strong>Project partial value:</strong>
+  <%= @customer.project_partial_value %>
+</p>
+
+<p>
+  <strong>Analysis contract:</strong>
+  <%= @customer.analysis_contract %>
+</p>
+
+<p>
+  <strong>Contract conclusion:</strong>
+  <%= @customer.contract_conclusion %>
+</p>
+
+<p>
+  <strong>Project prevision:</strong>
+  <%= @customer.project_prevision %>
+</p>
+
+<p>
+  <strong>Changed in project:</strong>
+  <%= @customer.changed_in_project %>
+</p>
+
+<p>
+  <strong>New calcs project:</strong>
+  <%= @customer.new_calcs_project %>
+</p>
+
+<p>
+  <strong>Project prev conclusion new date:</strong>
+  <%= @customer.project_prev_conclusion_new_date %>
+</p>
+
+<p>
+  <strong>New values project:</strong>
+  <%= @customer.new_values_project %>
+</p>
+
+<p>
+  <strong>Project completion and delivery:</strong>
+  <%= @customer.project_completion_and_delivery %>
+</p>
+
+<%= link_to 'Edit', edit_customer_path(@customer) %> |
+<%= link_to 'Back', customers_path %>

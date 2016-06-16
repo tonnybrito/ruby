@@ -1,3 +1,4 @@
+# encoding: utf-8
 # AULA 2
 # Telefone
 class Telefone

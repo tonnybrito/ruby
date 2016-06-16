@@ -1,0 +1,42 @@
+// Place all the styles related to the customers controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+p, {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 10px;
+  line-height: 10px;
+  color: red;
+}
+
+td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 10px;
+  line-height: 9px;
+  color: blue;
+  width: auto;
+  text-align: center;
+  font-weight: bold;
+  padding-right:  5px;
+  padding-left:  5px;
+}
+
+th {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 10px;
+  line-height: 9px;
+  color: green;
+  width: auto;
+  text-align: center;
+  padding-right:  5px;
+  padding-left:  5px;
+}
+
+ ul, ol {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 10px;
+  line-height: 18px;
+  color: black;
+}

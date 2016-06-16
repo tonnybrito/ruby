@@ -1,0 +1,34 @@
++----------+---------------------+---------+-----------+----------------+--------------+--------------+
+| round_id | play_at             | weekday | stadium   | city           | home_team_id | away_team_id |
++----------+---------------------+---------+-----------+----------------+--------------+--------------+
+|       40 | 2016-05-14 19:00:00 | Sat     | Maracanã  | Rio de Janeiro |           16 |            5 |
++----------+---------------------+---------+-----------+----------------+--------------+--------------+
+
+
+
+
+
+1 Palmeiras
+  2 Chapecoense SC
+    3 Fluminense
+      4 São Paulo
+        5 Sport Recife
+          6 Atlético Paranaense
+            7 Cruzeiro
+              8 Avaí
+                9 Grêmio
+                  10  Vasco
+                    11  Goiás
+                      12  Coritiba
+                      13  Corinthians
+                    14  Joinville
+                  15  Atlético Mineiro
+                16  Flamengo
+              17  Santos
+            18  Internacional
+          19  Figueirense
+        20  Ponte Preta
+      21  Botafogo
+    22  Vitória
+  23  Santa Cruz
+24  América-MG

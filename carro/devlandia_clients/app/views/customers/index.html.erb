@@ -1,0 +1,61 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Lista de clientes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nome do contato</th>
+      <th>Email</th>
+      <th>Companhia</th>
+      <th>Setor</th>
+      <th>Data do contato</th>
+      <th>tipo de projeto</th>
+      <th>linguagem do projeto</th>
+      <th>descrição do projeto</th>
+      <th>Calculo de horas</th>
+      <th>valor parcial projeto</th>
+      <th>Analise do contrato</th>
+      <th>Contrato / assinatura </th>
+      <th>previsão de entrega</th>
+      <th>Mudanças no projeto</th>
+      <th>Novos calculos do projeto</th>
+      <th>Atualização para conclusão do projeto</th>
+      <th>Valores do projeto atualizados</th>
+      <th>Projeto concluido e entregue</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @customers.each do |customer| %>
+      <tr>
+        <td><%= customer.contact_name %></td>
+        <td><%= customer.email %></td>
+        <td><%= customer.company %></td>
+        <td><%= customer.sector %></td>
+        <td><%= customer.contact_date %></td>
+        <td><%= customer.project %></td>
+        <td><%= customer.project_language %></td>
+        <td><%= customer.project_description %></td>
+        <td><%= customer.calc_hours %></td>
+        <td><%= customer.project_partial_value %></td>
+        <td><%= customer.analysis_contract %></td>
+        <td><%= customer.contract_conclusion %></td>
+        <td><%= customer.project_prevision %></td>
+        <td><%= customer.changed_in_project %></td>
+        <td><%= customer.new_calcs_project %></td>
+        <td><%= customer.project_prev_conclusion_new_date %></td>
+        <td><%= customer.new_values_project %></td>
+        <td><%= customer.project_completion_and_delivery %></td>
+        <td><%= link_to 'Show', customer %></td>
+        <td><%= link_to 'Edit', edit_customer_path(customer) %></td>
+        <td><%= link_to 'Destroy', customer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Customer', new_customer_path %>
